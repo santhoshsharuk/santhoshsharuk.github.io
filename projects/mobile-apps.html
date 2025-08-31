@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile App Projects | Santhosh Sharuk</title>
+  
+  <!-- This entire head section is copied from home.html to maintain consistent styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['Plus Jakarta Sans', 'sans-serif'],
+            'display': ['Clash Display', 'sans-serif'],
+            'script': ['Caveat', 'cursive']
+          },
+          colors: {
+            glass: {
+              light: 'rgba(255, 255, 255, 0.05)',
+              medium: 'rgba(255, 255, 255, 0.1)',
+              strong: 'rgba(255, 255, 255, 0.2)'
+            }
+          },
+          fontSize: {
+            '7xl': ['5rem', { lineHeight: '1.1' }],
+            '8xl': ['6rem', { lineHeight: '1' }],
+            '9xl': ['8rem', { lineHeight: '1' }],
+            '10xl': ['10rem', { lineHeight: '1' }]
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'reveal': 'reveal 0.8s forwards',
+            'blur-in': 'blurIn 1s forwards',
+            'pulse-glow': 'pulseGlow 3s infinite',
+            'slide-up': 'slideUp 0.5s forwards',
+            'cursor-blink': 'cursorBlink 1s infinite'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' }
+            },
+            reveal: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' }
+            },
+            blurIn: {
+              '0%': { opacity: 0, filter: 'blur(10px)' },
+              '100%': { opacity: 1, filter: 'blur(0)' }
+            },
+            pulseGlow: {
+              '0%, 100%': { boxShadow: '0 0 20px 0px rgba(255, 255, 255, 0.3)' },
+              '50%': { boxShadow: '0 0 30px 10px rgba(255, 255, 255, 0.5)' }
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(100%)', opacity: 0 },
+              '100%': { transform: 'translateY(0)', opacity: 1 }
+            },
+            cursorBlink: {
+              '0%, 100%': { opacity: 1 },
+              '50%': { opacity: 0 }
+            }
+          },
+          backgroundImage: {
+            'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Import fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 2rem;
+    }
+    
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    
+    /* Customized scrollbar */
+    ::-webkit-scrollbar { width: 5px; height: 5px; }
+    ::-webkit-scrollbar-track { background: #000; }
+    ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.3); border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.5); }
+    
+    /* Glass morphism style */
+    .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    .glass-dark { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+    .glass-hover:hover { background: rgba(255, 255, 255, 0.1); transition: all 0.3s ease; }
+    
+    /* Gradient text */
+    .text-gradient { background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0.5)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    
+    /* Card hover effect */
+    .project-card { transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease; }
+    .project-card:hover { transform: translateY(-15px) scale(1.02); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(255, 255, 255, 0.1); }
+    .project-card:hover .phone-screen { transform: scale(1.05); }
+
+    /* Noise overlay */
+    .noise { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4='); pointer-events: none; z-index: 100; opacity: 0.4; }
+    
+    /* Progress bar */
+    .progress-bar { position: fixed; top: 0; left: 0; height: 2px; background: linear-gradient(to right, rgba(255, 255, 255, 0.5), white); z-index: 999; width: 0%; transition: width 0.1s ease; }
+    
+    /* Mouse follower */
+    .mouse-follower { position: fixed; width: 40px; height: 40px; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 50%; transform: translate(-50%, -50%); pointer-events: none; z-index: 9999; transition: width 0.3s, height 0.3s, border-color 0.3s; display: none; }
+    @media (min-width: 768px) { .mouse-follower { display: block; } }
+    .mouse-follower.active { width: 60px; height: 60px; border-color: rgba(255, 255, 255, 0.5); background: rgba(255, 255, 255, 0.02); }
+
+    .phone-screen { transition: transform 0.7s ease; }
+  </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+  
+  <div class="noise"></div>
+  <div class="progress-bar"></div>
+  <div class="mouse-follower"></div>
+
+  <!-- Main Content for Project Category Page -->
+  <main class="relative pt-24 md:pt-40 pb-16 md:pb-40 px-4 md:px-16 animate-reveal">
+    <div class="absolute inset-0 bg-gradient-to-b from-black via-purple-950/20 to-black"></div>
+    
+    <div class="max-w-7xl mx-auto relative z-10">
+      
+      <!-- Back Link -->
+      <div class="mb-12">
+        <a href="../home.html#works" class="inline-flex items-center text-sm text-white/70 hover:text-white transition-colors group">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+          Back to All Categories
+        </a>
+      </div>
+
+      <!-- Page Title & Description -->
+      <h1 class="font-display text-4xl sm:text-6xl md:text-8xl font-bold leading-none mb-4">
+        <span class="text-gradient">Mobile App</span> Projects
+      </h1>
+      <p class="text-lg md:text-xl text-white/70 max-w-3xl mb-16 md:mb-24">
+        A showcase of cross-platform mobile applications built with Flutter. My focus is on creating smooth, performant, and visually appealing user experiences.
+      </p>
+
+      <!-- Project Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- PROJECT CARD 1 - START (Copy this block to add more projects) -->
+        <div class="project-card glass rounded-2xl overflow-hidden backdrop-blur-lg flex flex-col">
+          <!-- Phone Frame for Screenshot -->
+          <div class="p-6 pb-0">
+            <div class="mx-auto w-[200px] h-[400px] rounded-3xl border-4 border-white/10 bg-black p-2 relative overflow-hidden">
+              <img src="https://via.placeholder.com/200x400/111827/FFFFFF.png?text=Your+App+Screenshot" alt="Learning App" class="w-full h-full object-cover rounded-xl phone-screen">
+            </div>
+          </div>
+          <!-- App Details -->
+          <div class="p-6 pt-4 flex flex-col flex-grow">
+            <h3 class="font-display text-2xl font-semibold mb-2">Interactive Learning App</h3>
+            <p class="text-white/70 text-sm mb-4 flex-grow">An educational platform for students with AR features and interactive quizzes.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs glass px-2 py-1 rounded-full">Flutter</span>
+              <span class="text-xs glass px-2 py-1 rounded-full">Firebase</span>
+              <span class="text-xs glass px-2 py-1 rounded-full">ARKit</span>
+            </div>
+            <!-- Store Links -->
+            <div class="flex items-center gap-4 mt-auto pt-4">
+              <a href="#" class="flex items-center gap-2 text-sm font-medium hover:text-white transition-colors text-white/70">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.49 3.31C16.22 2.12 14.53 2.12 13.27 3.31L8.53 7.79L12.27 11.53L17.49 6.56C19.24 4.81 18.37 3.31 17.49 3.31ZM4.39 18.35C3.13 19.62 3.13 21.31 4.39 22.58C5.66 23.84 7.35 23.84 8.61 22.58L13.09 17.34L9.35 13.6L4.39 18.35Z" /></svg>
+                Google Play
+              </a>
+              <a href="#" class="flex items-center gap-2 text-sm font-medium hover:text-white transition-colors text-white/70">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" /></svg>
+                App Store
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- PROJECT CARD 1 - END -->
+        
+        <!-- PROJECT CARD 2 - START -->
+        <div class="project-card glass rounded-2xl overflow-hidden backdrop-blur-lg flex flex-col">
+          <!-- Phone Frame for Screenshot -->
+          <div class="p-6 pb-0">
+            <div class="mx-auto w-[200px] h-[400px] rounded-3xl border-4 border-white/10 bg-black p-2 relative overflow-hidden">
+              <img src="https://via.placeholder.com/200x400/1f2937/FFFFFF.png?text=Your+App+Screenshot" alt="Finance Tracker App" class="w-full h-full object-cover rounded-xl phone-screen">
+            </div>
+          </div>
+          <!-- App Details -->
+          <div class="p-6 pt-4 flex flex-col flex-grow">
+            <h3 class="font-display text-2xl font-semibold mb-2">Finance Tracker</h3>
+            <p class="text-white/70 text-sm mb-4 flex-grow">A personal finance app for tracking expenses and setting budgets with data visualization.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs glass px-2 py-1 rounded-full">Flutter</span>
+              <span class="text-xs glass px-2 py-1 rounded-full">Dart</span>
+              <span class="text-xs glass px-2 py-1 rounded-full">Hive DB</span>
+            </div>
+            <!-- Store Links -->
+            <div class="flex items-center gap-4 mt-auto pt-4">
+              <a href="#" class="flex items-center gap-2 text-sm font-medium hover:text-white transition-colors text-white/70">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.49 3.31C16.22 2.12 14.53 2.12 13.27 3.31L8.53 7.79L12.27 11.53L17.49 6.56C19.24 4.81 18.37 3.31 17.49 3.31ZM4.39 18.35C3.13 19.62 3.13 21.31 4.39 22.58C5.66 23.84 7.35 23.84 8.61 22.58L13.09 17.34L9.35 13.6L4.39 18.35Z" /></svg>
+                Google Play
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- PROJECT CARD 2 - END -->
+
+        <!-- PROJECT CARD 3 - START -->
+        <div class="project-card glass rounded-2xl overflow-hidden backdrop-blur-lg flex flex-col">
+          <!-- Phone Frame for Screenshot -->
+          <div class="p-6 pb-0">
+            <div class="mx-auto w-[200px] h-[400px] rounded-3xl border-4 border-white/10 bg-black p-2 relative overflow-hidden">
+              <img src="https://via.placeholder.com/200x400/374151/FFFFFF.png?text=Your+App+Screenshot" alt="IoT Control App" class="w-full h-full object-cover rounded-xl phone-screen">
+            </div>
+          </div>
+          <!-- App Details -->
+          <div class="p-6 pt-4 flex flex-col flex-grow">
+            <h3 class="font-display text-2xl font-semibold mb-2">Smart Home IoT</h3>
+            <p class="text-white/70 text-sm mb-4 flex-grow">An application to control smart home devices over Bluetooth and Wi-Fi.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs glass px-2 py-1 rounded-full">Flutter</span>
+              <span class="text-xs glass px-2 py-1 rounded-full">GetX</span>
+              <span class="text-xs glass px-2 py-1 rounded-full">MQTT</span>
+            </div>
+            <!-- Store Links -->
+            <div class="flex items-center gap-4 mt-auto pt-4">
+               <a href="#" class="text-sm font-medium hover:text-gradient transition-colors">View Code &rarr;</a>
+            </div>
+          </div>
+        </div>
+        <!-- PROJECT CARD 3 - END -->
+        
+      </div>
+    </div>
+  </main>
+
+  <!-- Re-using the footer from home.html for consistency -->
+  <footer class="relative pt-20 pb-10 px-4 md:px-16 mt-20">
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-indigo-950/10 to-black"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0 text-center md:text-left">
+          <a href="../home.html" class="text-xl font-display font-medium text-gradient">Santhosh Sharuk</a>
+          <div class="text-white/50 text-sm mt-2">© 2025 All rights reserved</div>
+        </div>
+        <div class="flex justify-center mt-4 md:mt-0">
+          <a href="../home.html#works" class="inline-flex items-center px-4 py-2 glass rounded-full text-sm hover:glass-hover transition-all">
+            <span class="mr-2">Back to Portfolio</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Re-using essential JavaScript from home.html -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Progress bar functionality
+      const progressBar = document.querySelector('.progress-bar');
+      window.addEventListener('scroll', () => {
+        if (progressBar) {
+          const windowHeight = window.innerHeight;
+          const documentHeight = document.documentElement.scrollHeight;
+          const scrollTop = window.scrollY;
+          const scrollPercentage = (scrollTop / (documentHeight - windowHeight)) * 100;
+          progressBar.style.width = scrollPercentage + '%';
+        }
+      });
+      
+      // Mouse follower functionality for desktop
+      const mouseFollower = document.querySelector('.mouse-follower');
+      if (window.innerWidth > 768 && mouseFollower) {
+        document.addEventListener('mousemove', (e) => {
+          mouseFollower.style.left = e.clientX + 'px';
+          mouseFollower.style.top = e.clientY + 'px';
+        });
+        const interactiveElements = document.querySelectorAll('a, button, .project-card');
+        interactiveElements.forEach(el => {
+          el.addEventListener('mouseenter', () => mouseFollower.classList.add('active'));
+          el.addEventListener('mouseleave', () => mouseFollower.classList.remove('active'));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

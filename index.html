@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome | Santhosh Sharuk Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['Plus Jakarta Sans', 'sans-serif'],
+            'display': ['Clash Display', 'sans-serif'],
+            'script': ['Caveat', 'cursive']
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'reveal': 'reveal 1.5s forwards',
+            'pulse-glow': 'pulseGlow 3s infinite',
+            'slide-up': 'slideUp 0.8s forwards',
+            'fade-in': 'fadeIn 1.2s forwards',
+            'spin-slow': 'spin 12s linear infinite',
+            'path-animation': 'pathAnimation 2s forwards',
+            'scale-in': 'scaleIn 0.7s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' }
+            },
+            reveal: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' }
+            },
+            pulseGlow: {
+              '0%, 100%': { boxShadow: '0 0 20px 0px rgba(255, 255, 255, 0.3)' },
+              '50%': { boxShadow: '0 0 30px 10px rgba(255, 255, 255, 0.5)' }
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(100%)', opacity: 0 },
+              '100%': { transform: 'translateY(0)', opacity: 1 }
+            },
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 }
+            },
+            pathAnimation: {
+              '0%': { strokeDashoffset: '500' },
+              '100%': { strokeDashoffset: '0' }
+            },
+            scaleIn: {
+              '0%': { transform: 'scale(0)', opacity: 0 },
+              '100%': { transform: 'scale(1)', opacity: 1 }
+            }
+          },
+          backgroundImage: {
+            'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Import fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      overflow: hidden;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    
+    /* Glass morphism style */
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Gradient text */
+    .text-gradient {
+      background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0.5));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    /* Logo SVG styles */
+    #logo-path {
+      stroke-dasharray: 500;
+      stroke-dashoffset: 500;
+      animation: pathAnimation 2s forwards;
+      animation-delay: 0.5s;
+    }
+    
+    /* Loader circle */
+    .loader-circle {
+      stroke-dasharray: 314;
+      stroke-dashoffset: 314;
+      transform-origin: center;
+      animation: loaderAnimation 3s ease-out forwards;
+    }
+    
+    @keyframes loaderAnimation {
+      0% {
+        stroke-dashoffset: 314;
+        transform: rotate(0deg);
+      }
+      50% {
+        stroke-dashoffset: 0;
+      }
+      100% {
+        stroke-dashoffset: 0;
+        transform: rotate(360deg);
+      }
+    }
+    
+    /* Noise overlay */
+    .noise {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=');
+      pointer-events: none;
+      z-index: 100;
+      opacity: 0.4;
+    }
+    
+    /* Progress bar */
+    .progress-bar {
+      height: 2px;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.5), white);
+      width: 0%;
+      transition: width 3s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+    
+    /* Floating orbs */
+    .floating-orb {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.2;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+      filter: blur(8px);
+      mix-blend-mode: screen;
+    }
+    
+    /* Exit animation */
+    .exit-animation {
+      animation: exitAnimation 0.8s forwards;
+    }
+    
+    @keyframes exitAnimation {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body class="text-white">
+  <!-- Noise overlay -->
+  <div class="noise"></div>
+  
+  <!-- Floating orbs -->
+  <div class="floating-orb w-32 h-32 md:w-64 md:h-64 top-[20%] left-[20%] animate-float"></div>
+  <div class="floating-orb w-48 h-48 md:w-80 md:h-80 bottom-[10%] right-[15%] animate-float" style="animation-delay: 0.5s;"></div>
+  <div class="floating-orb w-40 h-40 md:w-72 md:h-72 top-[60%] left-[10%] animate-float" style="animation-delay: 1s;"></div>
+  
+  <!-- Background gradient -->
+  <div class="absolute inset-0 bg-gradient-radial from-indigo-900/20 via-black to-black"></div>
+  
+  <!-- Main container -->
+  <div id="splash-container" class="h-screen w-screen flex flex-col items-center justify-center relative z-10">
+    <!-- Logo Container -->
+    <div class="relative animate-scale-in" style="animation-delay: 0.3s;">
+      <!-- Outer glow -->
+      <div class="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-pink-500/20 blur-xl animate-pulse-glow"></div>
+      
+      <!-- Logo with glass effect -->
+      <div class="glass w-32 h-32 md:w-40 md:h-40 rounded-full flex items-center justify-center relative overflow-hidden">
+        <!-- Logo SVG -->
+        <svg class="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path id="logo-path" d="M50 10C27.91 10 10 27.91 10 50C10 72.09 27.91 90 50 90C72.09 90 90 72.09 90 50C90 27.91 72.09 10 50 10ZM50 20C66.57 20 80 33.43 80 50C80 66.57 66.57 80 50 80C33.43 80 20 66.57 20 50C20 33.43 33.43 20 50 20Z" stroke="white" stroke-width="2"/>
+          <circle class="animate-spin-slow" cx="50" cy="50" r="25" stroke="white" stroke-width="2" stroke-dasharray="5 5"/>
+          <path d="M50 25L40 45H60L50 65" stroke="white" stroke-width="2"/>
+        </svg>
+        
+        <!-- Spinning loader -->
+        <!-- Logo loader image -->
+        <img src="/image/logo.jpg" alt="Loading..." class="absolute inset-0 w-full h-full object-contain" />
+      </div>
+    </div>
+    
+    <!-- Brand Text -->
+    <h1 class="mt-8 font-display text-4xl md:text-5xl font-bold relative opacity-0 animate-reveal" style="animation-delay: 1s;">
+      <span class="text-gradient">Santhosh Sharuk | </span>
+      <span class="text-white">Developer</span>
+    </h1>
+    
+    <!-- Tagline -->
+    <div class="mt-4 font-script text-xl md:text-2xl opacity-0 animate-reveal" style="animation-delay: 1.5s;">
+      <span>Building digital experiences with purpose.</span>
+    </div>
+    
+    <!-- Loading Progress -->
+    <div class="mt-12 w-48 md:w-64 opacity-0 animate-fade-in" style="animation-delay: 0.8s;">
+      <div class="text-xs text-center mb-2 text-white/70">Loading experience</div>
+      <div class="h-px bg-white/10 overflow-hidden rounded-full">
+        <div id="progress-bar" class="progress-bar h-full"></div>
+      </div>
+    </div>
+    
+    <!-- Skip Button (appears after a delay) -->
+    <button id="skip-button" class="mt-8 px-4 py-2 glass rounded-full text-sm opacity-0 hover:bg-white/10 transition-colors" style="animation-delay: 2.5s;">
+      Skip Intro
+    </button>
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const splashContainer = document.getElementById('splash-container');
+      const progressBar = document.getElementById('progress-bar');
+      const skipButton = document.getElementById('skip-button');
+      
+      // Start progress bar animation
+      setTimeout(() => {
+        progressBar.style.width = '100%';
+      }, 200);
+      
+      // Show skip button after 2.5 seconds
+      setTimeout(() => {
+        skipButton.classList.add('animate-fade-in');
+      }, 2500);
+      
+      // Skip button click handler
+      skipButton.addEventListener('click', () => {
+        redirectToMain();
+      });
+      
+      // Redirect to main page after animation completes
+      setTimeout(() => {
+        redirectToMain();
+      }, 3500);
+      
+      function redirectToMain() {
+        // Add exit animation
+        splashContainer.classList.add('exit-animation');
+        
+        // Redirect after exit animation completes
+        setTimeout(() => {
+          window.location.href = 'home.html';
+        }, 800);
+      }
+      
+      // Generate floating particles
+      const container = document.querySelector('body');
+      for (let i = 0; i < 20; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('absolute', 'rounded-full', 'bg-white/5', 'pointer-events-none');
+        
+        // Random size between 2px and 6px
+        const size = Math.random() * 4 + 2;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        
+        // Random position
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${Math.random() * 100}%`;
+        
+        // Random floating animation
+        particle.style.animation = `float ${Math.random() * 5 + 5}s ease-in-out infinite`;
+        particle.style.animationDelay = `${Math.random() * 5}s`;
+        
+        container.appendChild(particle);
+      }
+    });
+  </script>
+</body>
+</html>
