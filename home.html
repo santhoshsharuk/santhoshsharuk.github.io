@@ -133,9 +133,19 @@
     
     .text-outline-sm {
       color: transparent;
-      -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.3);
+      -webkit-text-stroke: 0.7px rgba(255, 255, 255, 0.3);
     }
     
+    .text-outline-md {
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+    }
+
+    .text-outline-lg {
+      color: transparent;
+      -webkit-text-stroke: 2px rgba(255, 255, 255, 0.8);
+    }
+
     /* Gradient text */
     .text-gradient {
       background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0.5));
@@ -320,6 +330,36 @@
         animation-duration: 8s;
       }
     }
+    /*button hover glass animation*/
+    /* Add a smooth transition to the skill icons */
+.glass-hover img {
+    transition: all 0.3s ease-in-out;
+}
+
+/* This is the hover effect that creates the glow */
+.glass-hover:hover img {
+    transform: scale(1.1); /* Makes the icon pop out slightly */
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.7)) 
+            drop-shadow(0 0 8px rgba(115, 97, 255, 0.6)); /* Your accent color glow */
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.7)) 
+            drop-shadow(0 0 8px rgba(115, 97, 255, 0.6));
+  }
+  50% {
+    transform: scale(1.15); /* Slightly larger at the peak of the pulse */
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 1)) 
+            drop-shadow(0 0 15px rgba(115, 97, 255, 0.8)); /* Brighter glow */
+  }
+  100% {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.7)) 
+            drop-shadow(0 0 8px rgba(115, 97, 255, 0.6));
+  }
+}
   </style>
 </head>
 <body class="bg-black text-white overflow-x-hidden">
@@ -497,55 +537,51 @@
         
         <div class="order-1 md:order-2">
           <!-- Floating icons with glass morphism - Fixed alignment based on image -->
-          <div class="relative h-64 sm:h-80 md:h-96">
-            <!-- Creativity Icon (Top Center) -->
-            <div class="absolute top-[5%] left-[50%] transform -translate-x-1/2 animate-float" style="animation-delay: 0s;">
-              <div class="glass p-6 md:p-8 rounded-2xl backdrop-blur-xl">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-12 md:w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <div class="text-center mt-2 md:mt-4 uppercase tracking-widest text-xs">
-                <span>Creativity</span>
-              </div>
-            </div>
-            
-            <!-- Development Icon (Right Middle) -->
-            <div class="absolute top-[40%] right-[10%] animate-float" style="animation-delay: 0.5s;">
-              <div class="glass p-6 md:p-8 rounded-2xl backdrop-blur-xl">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-12 md:w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
-              </div>
-              <div class="text-center mt-2 md:mt-4 uppercase tracking-widest text-xs">
-                <span>Development</span>
-              </div>
-            </div>
-            
-            <!-- Mobile Icon (Bottom Left) -->
-            <div class="absolute bottom-[15%] left-[20%] animate-float" style="animation-delay: 1s;">
-              <div class="glass p-6 md:p-8 rounded-2xl backdrop-blur-xl">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-12 md:w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div class="text-center mt-2 md:mt-4 uppercase tracking-widest text-xs">
-                <span>Mobile</span>
-              </div>
-            </div>
-            
-            <!-- Design Icon (Bottom Right) -->
-            <div class="absolute bottom-[5%] right-[40%] animate-float" style="animation-delay: 1.5s;">
-              <div class="glass p-6 md:p-8 rounded-2xl backdrop-blur-xl">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-12 md:w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-                </svg>
-              </div>
-              <div class="text-center mt-2 md:mt-4 uppercase tracking-widest text-xs">
-                <span>Design</span>
-              </div>
-            </div>
-          </div>
+          <div class="relative h-96 flex items-center justify-center">
+  <!-- Center invisible anchor for alignment -->
+  <div class="absolute w-0 h-0"></div>
+
+  <!-- Creativity (Top) -->
+  <div class="absolute top-8 flex flex-col items-center">
+    <div class="glass p-6 md:p-8 rounded-2xl backdrop-blur-xl hover:scale-105 transition-transform">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+      </svg>
+    </div>
+    <span class="mt-3 uppercase tracking-widest text-xs">Creativity</span>
+  </div>
+
+  <!-- Development (Right) -->
+  <div class="absolute right-8 flex flex-col items-center">
+    <div class="glass p-6 md:p-8 rounded-2xl backdrop-blur-xl hover:scale-105 transition-transform">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+      </svg>
+    </div>
+    <span class="mt-3 uppercase tracking-widest text-xs">Development</span>
+  </div>
+
+  <!-- Mobile (Left) -->
+  <div class="absolute left-8 flex flex-col items-center">
+    <div class="glass p-6 md:p-8 rounded-2xl backdrop-blur-xl hover:scale-105 transition-transform">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+      </svg>
+    </div>
+    <span class="mt-3 uppercase tracking-widest text-xs">Mobile</span>
+  </div>
+
+  <!-- Design (Bottom) -->
+  <div class="absolute bottom-8 flex flex-col items-center">
+    <div class="glass p-6 md:p-8 rounded-2xl backdrop-blur-xl hover:scale-105 transition-transform">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+      </svg>
+    </div>
+    <span class="mt-3 uppercase tracking-widest text-xs">Design</span>
+  </div>
+</div>
+
         </div>
       </div>
     </div>
@@ -557,7 +593,7 @@
   
   <div class="max-w-7xl mx-auto relative z-10">
     <h2 class="font-display text-3xl sm:text-5xl md:text-7xl font-semibold text-center mb-10 md:mb-28 leading-none">
-      <span class="text-outline-sm">My</span> <span class="text-gradient">Works</span>
+      <span class="text-outline-md">My</span> <span class="text-gradient">Works</span>
     </h2>
     
     <!-- Category Grid -->
@@ -637,7 +673,7 @@
   
   <div class="max-w-7xl mx-auto relative z-10">
     <h2 class="font-display text-3xl sm:text-5xl md:text-7xl font-semibold text-center mb-10 md:mb-28 leading-none">
-      <span class="text-outline-sm">My</span> <span class="text-gradient">Tech Stack</span>
+      <span class="text-outline-md">My</span> <span class="text-gradient">Tech Stack</span>
     </h2>
     
     <!-- Skill categories -->
@@ -657,22 +693,22 @@
         <div class="flex flex-wrap gap-3">
           <!-- Skill Tag -->
           <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
-            <img src="https://simpleicons.org/icons/react.svg" alt="React" class="w-5 h-5"/>
+            <img src="/icons/Reactjs.svg" alt="React" class="w-5 h-5"/>
             <span class="font-medium text-sm">React.js</span>
           </div>
           <!-- Skill Tag -->
           <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
-            <img src="https://simpleicons.org/icons/vuedotjs.svg" alt="Vue.js" class="w-5 h-5"/>
+            <img src="/icons/vue.svg" alt="Vue.js" class="w-5 h-5"/>
             <span class="font-medium text-sm">Vue.js</span>
           </div>
           <!-- Skill Tag -->
           <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
-            <img src="https://simpleicons.org/icons/javascript.svg" alt="JavaScript" class="w-5 h-5"/>
+            <img src="/icons/javascript-logo-svgrepo-com.svg" alt="JavaScript" class="w-5 h-5"/>
             <span class="font-medium text-sm">JavaScript</span>
           </div>
           <!-- Skill Tag -->
           <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
-            <img src="https://simpleicons.org/icons/tailwindcss.svg" alt="Tailwind CSS" class="w-5 h-5"/>
+            <img src="/icons/tailwind-svgrepo-com.svg" alt="Tailwind CSS" class="w-5 h-5"/>
             <span class="font-medium text-sm">Tailwind CSS</span>
           </div>
           <!-- Skill Tag -->
@@ -696,7 +732,7 @@
         </div>
         <div class="flex flex-wrap gap-3">
           <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
-            <img src="https://simpleicons.org/icons/nodedotjs.svg" alt="Node.js" class="w-5 h-5"/>
+            <img src="/icons/nodejs-logo-svgrepo-com.svg" alt="Node.js" class="w-5 h-5"/>
             <span class="font-medium text-sm">Node.js</span>
           </div>
           <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
@@ -704,19 +740,19 @@
             <span class="font-medium text-sm">Express</span>
           </div>
           <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
-            <img src="https://simpleicons.org/icons/python.svg" alt="Python" class="w-5 h-5"/>
+            <img src="/icons/python-svgrepo-com.svg" alt="Python" class="w-5 h-5"/>
             <span class="font-medium text-sm">Python</span>
           </div>
            <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
-            <img src="https://simpleicons.org/icons/django.svg" alt="Django" class="w-5 h-5"/>
+            <img src="/icons/django-svgrepo-com.svg" alt="Django" class="w-5 h-5"/>
             <span class="font-medium text-sm">Django</span>
           </div>
           <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
-            <img src="https://simpleicons.org/icons/mongodb.svg" alt="MongoDB" class="w-5 h-5"/>
+            <img src="/icons/MongoDB.svg" alt="MongoDB" class="w-5 h-5"/>
             <span class="font-medium text-sm">MongoDB</span>
           </div>
           <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
-            <img src="https://simpleicons.org/icons/mysql.svg" alt="MySQL" class="w-5 h-5"/>
+            <img src="/icons/mysql-logo-svgrepo-com.svg" alt="MySQL" class="w-5 h-5"/>
             <span class="font-medium text-sm">MySQL</span>
           </div>
         </div>
@@ -735,19 +771,19 @@
         </div>
         <div class="flex flex-wrap gap-3">
           <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
-            <img src="https://simpleicons.org/icons/flutter.svg" alt="Flutter" class="w-5 h-5"/>
+            <img src="/icons/Flutter.svg" alt="Flutter" class="w-5 h-5"/>
             <span class="font-medium text-sm">Flutter</span>
           </div>
           <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
-            <img src="https://simpleicons.org/icons/dart.svg" alt="Dart" class="w-5 h-5"/>
+            <img src="/icons/Dart.svg" alt="Dart" class="w-5 h-5"/>
             <span class="font-medium text-sm">Dart</span>
           </div>
           <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
-            <img src="https://simpleicons.org/icons/firebase.svg" alt="Firebase" class="w-5 h-5"/>
+            <img src="/icons/Firebase.svg" alt="Firebase" class="w-5 h-5"/>
             <span class="font-medium text-sm">Firebase</span>
           </div>
           <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
-            <img src="https://simpleicons.org/icons/react.svg" alt="React Native" class="w-5 h-5"/>
+            <img src="/icons/Reactjs.svg" alt="React Native" class="w-5 h-5"/>
             <span class="font-medium text-sm">React Native</span>
           </div>
         </div>
@@ -755,30 +791,52 @@
       
       <!-- UI/UX Design -->
       <div class="glass rounded-2xl p-6 md:p-8 backdrop-blur-xl">
-        <div class="flex items-center gap-4 mb-6">
-          <div class="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center glass rounded-xl flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>
-          </div>
-          <div>
-            <h3 class="text-xl md:text-2xl font-display font-semibold">UI/UX Design</h3>
-            <p class="text-white/60 text-sm">Designing intuitive and user-centric interfaces.</p>
-          </div>
-        </div>
-        <div class="flex flex-wrap gap-3">
-          <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
-            <img src="https://simpleicons.org/icons/figma.svg" alt="Figma" class="w-5 h-5"/>
-            <span class="font-medium text-sm">Figma</span>
-          </div>
-          <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
-            <img src="https://simpleicons.org/icons/adobeillustrator.svg" alt="Illustrator" class="w-5 h-5"/>
-            <span class="font-medium text-sm">Illustrator</span>
-          </div>
-           <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
-            <img src="https://simpleicons.org/icons/adobephotoshop.svg" alt="Photoshop" class="w-5 h-5"/>
-            <span class="font-medium text-sm">Photoshop</span>
-          </div>
-        </div>
-      </div>
+  <!-- Header Section -->
+  <div class="flex items-center gap-4 mb-6">
+    <!-- Brain / Agent Icon -->
+    <div class="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center glass rounded-xl flex-shrink-0">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 md:h-9 md:w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+          d="M12 4a8 8 0 100 16 8 8 0 000-16zm-3 8h6m-3-3v6" />
+      </svg>
+    </div>
+    <!-- Title & Description -->
+    <div>
+      <h3 class="text-xl md:text-2xl font-display font-semibold">AI Project Development</h3>
+      <p class="text-white/60 text-sm">LLMs, local AI agents & next-gen intelligent applications.</p>
+    </div>
+  </div>
+
+  <!-- Tools Section -->
+  <div class="flex flex-wrap gap-3">
+    <!-- Gemini API -->
+    <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
+      <img src="/icons/gemini.svg" alt="Gemini" class="w-5 h-5"/>
+      <span class="font-medium text-sm">Gemini API</span>
+    </div>
+    <!-- Local LLMs -->
+    <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
+      <img src="https://huggingface.co/front/assets/huggingface_logo.svg" alt="Local LLM" class="w-5 h-5"/>
+      <span class="font-medium text-sm">Local LLMs</span>
+    </div>
+    <!-- LangChain -->
+    <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
+      <img src="/icons/langchain-color.svg" alt="LangChain" class="w-5 h-5"/>
+      <span class="font-medium text-sm">LangChain</span>
+    </div>
+    <!-- Vector DB -->
+    <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
+      <img src="https://avatars.githubusercontent.com/u/78025242?s=200&v=4" alt="Pinecone" class="w-5 h-5"/>
+      <span class="font-medium text-sm">Vector DBs</span>
+    </div>
+    <!-- Agents -->
+    <div class="flex items-center gap-2 glass-hover p-2 pr-3 rounded-lg transition-colors">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712105.png" alt="Agents" class="w-5 h-5"/>
+      <span class="font-medium text-sm">AI Agents</span>
+    </div>
+  </div>
+</div>
+
     </div>
 
     <!-- Additional skills showcase -->
@@ -841,28 +899,28 @@
         
         <!-- Tool Cards - Block 1 (will be duplicated for seamless scroll) -->
         <div class="flex items-center gap-4 glass p-4 rounded-xl flex-shrink-0 w-64">
-          <img src="https://simpleicons.org/icons/openai.svg" alt="ChatGPT" class="w-8 h-8 filter grayscale hover:grayscale-0 transition-all duration-300"/>
+          <img src="/icons/openai.svg" alt="ChatGPT" class="w-8 h-8 filter grayscale hover:grayscale-0 transition-all duration-300"/>
           <div>
             <h4 class="font-semibold">ChatGPT</h4>
             <p class="text-sm text-white/60">Code generation & debugging</p>
           </div>
         </div>
         <div class="flex items-center gap-4 glass p-4 rounded-xl flex-shrink-0 w-64">
-          <img src="https://simpleicons.org/icons/googleai.svg" alt="Google AI Studio" class="w-8 h-8 filter grayscale hover:grayscale-0 transition-all duration-300"/>
+          <img src="/icons/Google logo search new.svg" alt="Google AI Studio" class="w-8 h-8 filter grayscale hover:grayscale-0 transition-all duration-300"/>
           <div>
             <h4 class="font-semibold">Google AI Studio</h4>
             <p class="text-sm text-white/60">Model prototyping</p>
           </div>
         </div>
         <div class="flex items-center gap-4 glass p-4 rounded-xl flex-shrink-0 w-64">
-          <img src="https://simpleicons.org/icons/anthropic.svg" alt="Claude" class="w-8 h-8 filter grayscale hover:grayscale-0 transition-all duration-300"/>
+          <img src="/icons/claude-color.svg" alt="Claude" class="w-8 h-8 filter grayscale hover:grayscale-0 transition-all duration-300"/>
           <div>
             <h4 class="font-semibold">Claude</h4>
             <p class="text-sm text-white/60">Creative & technical writing</p>
           </div>
         </div>
         <div class="flex items-center gap-4 glass p-4 rounded-xl flex-shrink-0 w-64">
-          <img src="https://simpleicons.org/icons/githubcopilot.svg" alt="GitHub Copilot" class="w-8 h-8 filter grayscale hover:grayscale-0 transition-all duration-300"/>
+          <img src="/icons/githubcopilot.svg" alt="GitHub Copilot" class="w-8 h-8 filter grayscale hover:grayscale-0 transition-all duration-300"/>
           <div>
             <h4 class="font-semibold">GitHub Copilot</h4>
             <p class="text-sm text-white/60">In-editor code completion</p>
@@ -892,14 +950,14 @@
           </div>
         </div>
         <div class="flex items-center gap-4 glass p-4 rounded-xl flex-shrink-0 w-64">
-          <img src="https://simpleicons.org/icons/anthropic.svg" alt="Claude" class="w-8 h-8 filter grayscale hover:grayscale-0 transition-all duration-300"/>
+          <img src="/icons/claude-color.svg" alt="Claude" class="w-8 h-8 filter grayscale hover:grayscale-0 transition-all duration-300"/>
           <div>
             <h4 class="font-semibold">Claude</h4>
             <p class="text-sm text-white/60">Creative & technical writing</p>
           </div>
         </div>
         <div class="flex items-center gap-4 glass p-4 rounded-xl flex-shrink-0 w-64">
-          <img src="https://simpleicons.org/icons/githubcopilot.svg" alt="GitHub Copilot" class="w-8 h-8 filter grayscale hover:grayscale-0 transition-all duration-300"/>
+          <img src="/icons/githubcopilot.svg" alt="GitHub Copilot" class="w-8 h-8 filter grayscale hover:grayscale-0 transition-all duration-300"/>
           <div>
             <h4 class="font-semibold">GitHub Copilot</h4>
             <p class="text-sm text-white/60">In-editor code completion</p>
