@@ -1,0 +1,8 @@
+# Allow all search engines
+User-agent: *
+Disallow: /admin/
+Disallow: /scripts/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://santhoshsharuk.me/sitemap.xml
