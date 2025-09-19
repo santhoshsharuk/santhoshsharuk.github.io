@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Interactive Learning App",
+    "description": "An educational platform for students with AR features and interactive quizzes.",
+    "cover_image": "https://via.placeholder.com/200x400/111827/FFFFFF.png?text=Learning+App",
+    "tags": ["Flutter", "Firebase", "ARKit"],
+    "play_store_link": "#",
+    "app_store_link": "#",
+    "code_link": "none"
+  },
+  {
+    "name": "Finance Tracker",
+    "description": "A personal finance app for tracking expenses and setting budgets with data visualization.",
+    "cover_image": "https://via.placeholder.com/200x400/1f2937/FFFFFF.png?text=Finance+App",
+    "tags": ["Flutter", "Dart", "Hive DB"],
+    "play_store_link": "#",
+    "app_store_link": "none",
+    "code_link": "none"
+  },
+  {
+    "name": "Smart Home IoT",
+    "description": "An application to control smart home devices over Bluetooth and Wi-Fi.",
+    "cover_image": "https://via.placeholder.com/200x400/374151/FFFFFF.png?text=IoT+App",
+    "tags": ["Flutter", "GetX", "MQTT"],
+    "play_store_link": "none",
+    "app_store_link": "none",
+    "code_link": "#"
+  }
+]

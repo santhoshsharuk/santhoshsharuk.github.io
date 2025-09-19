@@ -148,72 +148,8 @@
       </p>
 
       <!-- Project Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-        <!-- PROJECT CARD 1 - START (Copy this block to add more projects) -->
-        <div class="project-card glass rounded-2xl overflow-hidden backdrop-blur-lg flex flex-col">
-          <div class="aspect-video bg-black/30">
-            <img src="https://via.placeholder.com/600x400/111827/FFFFFF.png?text=Mobile+App+Design" alt="Mobile Banking App Design" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
-          </div>
-          <div class="p-6 flex flex-col flex-grow">
-            <h3 class="font-display text-2xl font-semibold mb-2">Mobile Banking App Redesign</h3>
-            <p class="text-white/60 text-sm mb-4">Role: Lead UI/UX Designer</p>
-            <p class="text-white/70 text-sm mb-4 flex-grow">A complete redesign of a mobile banking app focused on simplifying user flows and improving accessibility.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="text-xs glass px-2 py-1 rounded-full">Figma</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">User Research</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">Prototyping</span>
-            </div>
-            <div class="flex items-center gap-4 mt-auto pt-4 border-t border-white/10">
-              <a href="#" class="text-sm font-medium hover:text-gradient transition-colors">View Figma File &rarr;</a>
-              <a href="#" class="text-sm font-medium hover:text-gradient transition-colors">Interactive Prototype &rarr;</a>
-            </div>
-          </div>
-        </div>
-        <!-- PROJECT CARD 1 - END -->
-        
-        <!-- PROJECT CARD 2 - START -->
-        <div class="project-card glass rounded-2xl overflow-hidden backdrop-blur-lg flex flex-col">
-          <div class="aspect-video bg-black/30">
-            <img src="https://via.placeholder.com/600x400/1f2937/FFFFFF.png?text=Web+Dashboard+UI" alt="Analytics Dashboard Design" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
-          </div>
-          <div class="p-6 flex flex-col flex-grow">
-            <h3 class="font-display text-2xl font-semibold mb-2">Analytics Dashboard UI</h3>
-            <p class="text-white/60 text-sm mb-4">Role: Product Designer</p>
-            <p class="text-white/70 text-sm mb-4 flex-grow">Designed a complex data visualization dashboard for a SaaS product, ensuring clarity and ease of use for complex datasets.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="text-xs glass px-2 py-1 rounded-full">Figma</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">Component Library</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">Data Viz</span>
-            </div>
-            <div class="flex items-center gap-4 mt-auto pt-4 border-t border-white/10">
-              <a href="#" class="text-sm font-medium hover:text-gradient transition-colors">View Figma File &rarr;</a>
-            </div>
-          </div>
-        </div>
-        <!-- PROJECT CARD 2 - END -->
-
-        <!-- PROJECT CARD 3 - START -->
-        <div class="project-card glass rounded-2xl overflow-hidden backdrop-blur-lg flex flex-col">
-          <div class="aspect-video bg-black/30">
-            <img src="https://via.placeholder.com/600x400/374151/FFFFFF.png?text=E-commerce+Case+Study" alt="E-commerce Case Study" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
-          </div>
-          <div class="p-6 flex flex-col flex-grow">
-            <h3 class="font-display text-2xl font-semibold mb-2">E-commerce Checkout Flow</h3>
-            <p class="text-white/60 text-sm mb-4">Role: UX Researcher & Designer</p>
-            <p class="text-white/70 text-sm mb-4 flex-grow">A UX case study focused on identifying pain points and redesigning a checkout process to reduce cart abandonment.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="text-xs glass px-2 py-1 rounded-full">Wireframing</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">User Testing</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">Case Study</span>
-            </div>
-            <div class="flex items-center gap-4 mt-auto pt-4 border-t border-white/10">
-              <a href="#" class="text-sm font-medium hover:text-gradient transition-colors">Read Case Study &rarr;</a>
-            </div>
-          </div>
-        </div>
-        <!-- PROJECT CARD 3 - END -->
-        
+      <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- UI/UX projects will be dynamically inserted here -->
       </div>
     </div>
   </main>
@@ -252,19 +188,73 @@
         }
       });
       
-      // Mouse follower functionality for desktop
       const mouseFollower = document.querySelector('.mouse-follower');
-      if (window.innerWidth > 768 && mouseFollower) {
-        document.addEventListener('mousemove', (e) => {
-          mouseFollower.style.left = e.clientX + 'px';
-          mouseFollower.style.top = e.clientY + 'px';
-        });
-        const interactiveElements = document.querySelectorAll('a, button, .project-card');
-        interactiveElements.forEach(el => {
-          el.addEventListener('mouseenter', () => mouseFollower.classList.add('active'));
-          el.addEventListener('mouseleave', () => mouseFollower.classList.remove('active'));
-        });
-      }
+      const setupMouseFollower = () => {
+        if (window.innerWidth > 768 && mouseFollower) {
+          document.addEventListener('mousemove', (e) => {
+            mouseFollower.style.left = e.clientX + 'px';
+            mouseFollower.style.top = e.clientY + 'px';
+          });
+          const interactiveElements = document.querySelectorAll('a, button, .project-card');
+          interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => mouseFollower.classList.add('active'));
+            el.addEventListener('mouseleave', () => mouseFollower.classList.remove('active'));
+          });
+        }
+      };
+
+      const loadProjects = async () => {
+        try {
+          const response = await fetch('./data/ui-ux-projects.json');
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const projects = await response.json();
+          const projectGrid = document.getElementById('project-grid');
+          
+          if (projectGrid) {
+            projectGrid.innerHTML = ''; // Clear existing content
+            projects.forEach(project => {
+              const tagsHtml = project.tags.map(tag => `<span class="text-xs glass px-2 py-1 rounded-full">${tag}</span>`).join('');
+              
+              const linksHtml = project.links.map(link => 
+                `<a href="${link.url}" class="text-sm font-medium hover:text-gradient transition-colors">${link.text}</a>`
+              ).join('');
+
+              const projectCardHtml = `
+                <div class="project-card glass rounded-2xl overflow-hidden backdrop-blur-lg flex flex-col">
+                  <div class="aspect-video bg-black/30">
+                    <img src="${project.cover_image}" alt="${project.title}" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                  </div>
+                  <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-display text-2xl font-semibold mb-2">${project.title}</h3>
+                    <p class="text-white/60 text-sm mb-4">Role: ${project.role}</p>
+                    <p class="text-white/70 text-sm mb-4 flex-grow">${project.description}</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      ${tagsHtml}
+                    </div>
+                    <div class="flex items-center gap-4 mt-auto pt-4 border-t border-white/10">
+                      ${linksHtml}
+                    </div>
+                  </div>
+                </div>
+              `;
+              projectGrid.innerHTML += projectCardHtml;
+            });
+            
+            // Re-initialize mouse follower for new elements
+            setupMouseFollower();
+          }
+        } catch (error) {
+          console.error("Could not load UI/UX projects:", error);
+          const projectGrid = document.getElementById('project-grid');
+          if(projectGrid) {
+            projectGrid.innerHTML = '<p class="text-white/70 col-span-full text-center">Failed to load projects. Please try again later.</p>';
+          }
+        }
+      };
+
+      loadProjects();
     });
   </script>
 </body>

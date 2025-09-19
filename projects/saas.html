@@ -148,76 +148,8 @@
       </p>
 
       <!-- Project Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-        <!-- PROJECT CARD 1 - START (Copy this block to add more projects) -->
-        <div class="project-card glass rounded-2xl overflow-hidden backdrop-blur-lg flex flex-col">
-          <div class="aspect-video relative overflow-hidden bg-black/30">
-            <img src="https://via.placeholder.com/800x450/111827/FFFFFF.png?text=Product+UI+Screenshot" alt="Analytics Platform Screenshot" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
-          </div>
-          <div class="p-6 flex flex-col flex-grow">
-            <div class="flex justify-between items-start mb-4">
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center glass rounded-lg">
-                  <!-- Replace with your product's logo -->
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
-                </div>
-                <div>
-                  <h3 class="font-display text-2xl font-semibold">DataDash</h3>
-                  <p class="text-white/60 text-sm">Real-time Analytics Platform</p>
-                </div>
-              </div>
-              <div class="bg-green-500/20 text-green-300 text-xs font-bold px-2 py-1 rounded-full">LIVE</div>
-            </div>
-            <p class="text-white/70 text-sm mb-4 flex-grow">A powerful analytics dashboard that provides businesses with real-time insights into their web traffic and user behavior.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="text-xs glass px-2 py-1 rounded-full">React</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">Node.js</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">PostgreSQL</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">AWS</span>
-            </div>
-            <div class="flex items-center gap-4 mt-auto pt-4 border-t border-white/10">
-              <a href="#" class="btn-glow inline-block text-sm font-medium px-4 py-2 glass-hover rounded-lg transition-colors">Visit Website &rarr;</a>
-              <a href="#" class="text-sm font-medium hover:text-gradient transition-colors">View Pricing</a>
-            </div>
-          </div>
-        </div>
-        <!-- PROJECT CARD 1 - END -->
-        
-        <!-- PROJECT CARD 2 - START -->
-        <div class="project-card glass rounded-2xl overflow-hidden backdrop-blur-lg flex flex-col">
-          <div class="aspect-video relative overflow-hidden bg-black/30">
-            <img src="https://via.placeholder.com/800x450/1f2937/FFFFFF.png?text=Product+UI+Screenshot" alt="Task Manager Screenshot" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
-          </div>
-          <div class="p-6 flex flex-col flex-grow">
-            <div class="flex justify-between items-start mb-4">
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center glass rounded-lg">
-                  <!-- Replace with your product's logo -->
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
-                </div>
-                <div>
-                  <h3 class="font-display text-2xl font-semibold">TaskFlow</h3>
-                  <p class="text-white/60 text-sm">Collaborative Task Manager</p>
-                </div>
-              </div>
-              <div class="bg-yellow-500/20 text-yellow-300 text-xs font-bold px-2 py-1 rounded-full">BETA</div>
-            </div>
-            <p class="text-white/70 text-sm mb-4 flex-grow">A Kanban-style task management application designed for agile teams to streamline their workflow and boost productivity.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="text-xs glass px-2 py-1 rounded-full">Vue.js</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">Django</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">MongoDB</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">Docker</span>
-            </div>
-            <div class="flex items-center gap-4 mt-auto pt-4 border-t border-white/10">
-              <a href="#" class="btn-glow inline-block text-sm font-medium px-4 py-2 glass-hover rounded-lg transition-colors">Live Demo &rarr;</a>
-              <a href="#" class="text-sm font-medium hover:text-gradient transition-colors">View on GitHub</a>
-            </div>
-          </div>
-        </div>
-        <!-- PROJECT CARD 2 - END -->
-        
+      <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- SaaS projects will be dynamically inserted here -->
       </div>
     </div>
   </main>
@@ -256,19 +188,92 @@
         }
       });
       
-      // Mouse follower functionality for desktop
       const mouseFollower = document.querySelector('.mouse-follower');
-      if (window.innerWidth > 768 && mouseFollower) {
-        document.addEventListener('mousemove', (e) => {
-          mouseFollower.style.left = e.clientX + 'px';
-          mouseFollower.style.top = e.clientY + 'px';
-        });
-        const interactiveElements = document.querySelectorAll('a, button, .project-card');
-        interactiveElements.forEach(el => {
-          el.addEventListener('mouseenter', () => mouseFollower.classList.add('active'));
-          el.addEventListener('mouseleave', () => mouseFollower.classList.remove('active'));
-        });
-      }
+      const setupMouseFollower = () => {
+        if (window.innerWidth > 768 && mouseFollower) {
+          document.addEventListener('mousemove', (e) => {
+            mouseFollower.style.left = e.clientX + 'px';
+            mouseFollower.style.top = e.clientY + 'px';
+          });
+          const interactiveElements = document.querySelectorAll('a, button, .project-card');
+          interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => mouseFollower.classList.add('active'));
+            el.addEventListener('mouseleave', () => mouseFollower.classList.remove('active'));
+          });
+        }
+      };
+
+      const loadProjects = async () => {
+        try {
+          const response = await fetch('./data/saas-projects.json');
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const projects = await response.json();
+          const projectGrid = document.getElementById('project-grid');
+          
+          if (projectGrid) {
+            projectGrid.innerHTML = ''; // Clear existing content
+            projects.forEach(project => {
+              const tagsHtml = project.tags.map(tag => `<span class="text-xs glass px-2 py-1 rounded-full">${tag}</span>`).join('');
+
+              const secondaryLinkHtml = project.secondary_link 
+                ? `<a href="${project.secondary_link.url}" class="text-sm font-medium hover:text-gradient transition-colors">${project.secondary_link.text}</a>`
+                : '';
+              
+              const statusColors = {
+                green: 'bg-green-500/20 text-green-300',
+                yellow: 'bg-yellow-500/20 text-yellow-300'
+              };
+              const statusClass = statusColors[project.status_color] || 'bg-gray-500/20 text-gray-300';
+              
+              const projectCardHtml = `
+                <div class="project-card glass rounded-2xl overflow-hidden backdrop-blur-lg flex flex-col">
+                  <div class="aspect-video relative overflow-hidden bg-black/30">
+                    <img src="${project.cover_image}" alt="${project.name} Screenshot" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                  </div>
+                  <div class="p-6 flex flex-col flex-grow">
+                    <div class="flex justify-between items-start mb-4">
+                      <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center glass rounded-lg">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="${project.logo_svg_path}" />
+                          </svg>
+                        </div>
+                        <div>
+                          <h3 class="font-display text-2xl font-semibold">${project.name}</h3>
+                          <p class="text-white/60 text-sm">${project.subtitle}</p>
+                        </div>
+                      </div>
+                      <div class="${statusClass} text-xs font-bold px-2 py-1 rounded-full">${project.status}</div>
+                    </div>
+                    <p class="text-white/70 text-sm mb-4 flex-grow">${project.description}</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      ${tagsHtml}
+                    </div>
+                    <div class="flex items-center gap-4 mt-auto pt-4 border-t border-white/10">
+                      <a href="${project.primary_link.url}" class="btn-glow inline-block text-sm font-medium px-4 py-2 glass-hover rounded-lg transition-colors">${project.primary_link.text}</a>
+                      ${secondaryLinkHtml}
+                    </div>
+                  </div>
+                </div>
+              `;
+              projectGrid.innerHTML += projectCardHtml;
+            });
+            
+            // Re-initialize mouse follower for new elements
+            setupMouseFollower();
+          }
+        } catch (error) {
+          console.error("Could not load SaaS projects:", error);
+          const projectGrid = document.getElementById('project-grid');
+          if(projectGrid) {
+            projectGrid.innerHTML = '<p class="text-white/70 col-span-full text-center">Failed to load projects. Please try again later.</p>';
+          }
+        }
+      };
+
+      loadProjects();
     });
   </script>
 </body>

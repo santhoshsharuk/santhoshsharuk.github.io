@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post | Santhosh Sharuk</title> <!-- Title will be updated by JS -->
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'], display: ['Clash Display', 'sans-serif'], }, animation: { reveal: 'reveal 0.8s forwards' }, keyframes: { reveal: { '0%': { opacity: 0, transform: 'translateY(20px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } } } } } }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600&display=swap" rel="stylesheet">
+    
+    <style>
+      body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020010; color: #E0E0E0; overflow-x: hidden; }
+      .text-gradient { background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0.6)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+      .noise-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY tribulationslIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4='); pointer-events: none; z-index: 100; opacity: 0.5; }
+      
+      /* Styles for dynamically injected HTML content from the JSON file */
+      #post-content-container h2 { font-family: 'Clash Display', sans-serif; font-weight: 600; font-size: 2.25rem; margin-top: 2.5rem; margin-bottom: 1rem; color: #fff; }
+      #post-content-container p { font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem; color: #C0C0C0; }
+      #post-content-container ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; }
+      #post-content-container li { margin-bottom: 0.5rem; }
+      #post-content-container blockquote { border-left: 4px solid #ec4899; padding-left: 1.5rem; margin: 2rem 0; font-style: italic; color: #fff; }
+      #post-content-container pre { background-color: rgba(12, 5, 29, 0.8); padding: 1.5rem; border-radius: 0.5rem; border: 1px solid rgba(255, 255, 255, 0.1); overflow-x: auto; margin: 2rem 0; }
+      #post-content-container code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.9rem; }
+    </style>
+</head>
+<body class="bg-[#020010]">
+  
+    <div class="noise-overlay"></div>
+
+    <main id="main-content" class="relative pt-24 md:pt-40 pb-16 md:pb-40 px-4 md:px-16 opacity-0 transition-opacity duration-500">
+      <div class="absolute inset-0 bg-gradient-radial from-transparent to-[#020010]"></div>
+      
+      <div class="max-w-4xl mx-auto relative z-10">
+        
+        <div class="mb-8">
+            <a href="blog.html" class="inline-flex items-center text-sm text-white/70 hover:text-white transition-colors group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                Back to All Articles
+            </a>
+        </div>
+
+        <!-- Post Header -->
+        <header id="post-header" class="mb-8 md:mb-12">
+            <h1 id="post-title" class="font-display text-4xl md:text-6xl font-semibold leading-tight mb-4"></h1>
+            <div id="post-meta" class="flex flex-wrap items-center gap-x-4 gap-y-2 text-white/60 text-sm"></div>
+            <div id="post-tags" class="flex flex-wrap gap-2 mt-4"></div>
+        </header>
+        
+        <!-- Cover Image -->
+        <div id="post-cover-image-container" class="aspect-video bg-white/5 rounded-2xl overflow-hidden mb-8 md:mb-12"></div>
+        
+        <!-- Post Content -->
+        <article id="post-content-container" class="max-w-3xl mx-auto"></article>
+
+        <div id="loading-state" class="text-center text-white/70 py-16">
+            <div class="text-xl">Loading article...</div>
+        </div>
+      </div>
+    </main>
+    
+    <footer class="relative pt-20 pb-10 px-4 md:px-16 mt-20 border-t border-white/10">
+      <div class="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0 text-center md:text-left">
+              <a href="../home.html" class="text-xl font-display font-medium text-gradient">Santhosh Sharuk</a>
+              <div class="text-white/50 text-sm mt-2">© 2025 All rights reserved</div>
+          </div>
+           <div class="flex justify-center mt-4 md:mt-0">
+              <a href="blog.html" class="inline-flex items-center px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm hover:bg-white/10 transition-all">
+                  <span class="mr-2">All Articles</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4 12H9m3 0a2 2 0 002-2V7m-5 13v-5a2 2 0 012-2h2" /></svg>
+              </a>
+          </div>
+      </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const mainContent = document.getElementById('main-content');
+            const loadingState = document.getElementById('loading-state');
+
+            const params = new URLSearchParams(window.location.search);
+            const postId = params.get('id');
+
+            if (!postId) {
+                window.location.href = 'blog.html';
+                return;
+            }
+
+            try {
+                const response = await fetch('./data/blog.json');
+                const posts = await response.json();
+                const post = posts.find(p => p.id === postId);
+
+                if (post) {
+                    loadingState.style.display = 'none';
+
+                    // Update page title
+                    document.title = `${post.title} | Santhosh Sharuk`;
+
+                    // Populate Header
+                    document.getElementById('post-title').textContent = post.title;
+                    
+                    const formattedDate = new Date(post.publish_date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+                    document.getElementById('post-meta').innerHTML = `
+                        <span>By ${post.author}</span>
+                        <span>&bull;</span>
+                        <span>${formattedDate}</span>
+                        <span>&bull;</span>
+                        <span>${post.read_time}</span>
+                    `;
+
+                    // Populate Tags
+                    const tagsContainer = document.getElementById('post-tags');
+                    tagsContainer.innerHTML = post.tags.map(tag => `<span class="bg-white/5 px-3 py-1 rounded-full text-xs">${tag}</span>`).join('');
+                    
+                    // Populate Cover Image
+                    document.getElementById('post-cover-image-container').innerHTML = `<img src="${post.cover_image}" alt="${post.title}" class="w-full h-full object-cover">`;
+
+                    // Populate Main Content
+                    document.getElementById('post-content-container').innerHTML = post.content;
+
+                    mainContent.classList.add('opacity-100');
+                } else {
+                    loadingState.innerHTML = '<p class="text-red-400 text-2xl">Post not found. Redirecting...</p>';
+                    setTimeout(() => window.location.href = 'blog.html', 2000);
+                }
+
+            } catch (error) {
+                console.error('Failed to load the blog post:', error);
+                loadingState.innerHTML = '<p class="text-red-400">Could not load this article. Please try again later.</p>';
+            }
+        });
+    </script>
+</body>
+</html>

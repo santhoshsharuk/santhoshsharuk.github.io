@@ -1,0 +1,38 @@
+[
+  {
+    "name": "DataDash",
+    "subtitle": "Real-time Analytics Platform",
+    "cover_image": "https://via.placeholder.com/800x450/111827/FFFFFF.png?text=Product+UI+Screenshot",
+    "logo_svg_path": "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6",
+    "status": "LIVE",
+    "status_color": "green",
+    "description": "A powerful analytics dashboard that provides businesses with real-time insights into their web traffic and user behavior.",
+    "tags": ["React", "Node.js", "PostgreSQL", "AWS"],
+    "primary_link": {
+      "url": "#",
+      "text": "Visit Website &rarr;"
+    },
+    "secondary_link": {
+      "url": "#",
+      "text": "View Pricing"
+    }
+  },
+  {
+    "name": "TaskFlow",
+    "subtitle": "Collaborative Task Manager",
+    "cover_image": "https://via.placeholder.com/800x450/1f2937/FFFFFF.png?text=Product+UI+Screenshot",
+    "logo_svg_path": "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4",
+    "status": "BETA",
+    "status_color": "yellow",
+    "description": "A Kanban-style task management application designed for agile teams to streamline their workflow and boost productivity.",
+    "tags": ["Vue.js", "Django", "MongoDB", "Docker"],
+    "primary_link": {
+      "url": "#",
+      "text": "Live Demo &rarr;"
+    },
+    "secondary_link": {
+      "url": "#",
+      "text": "View on GitHub"
+    }
+  }
+]

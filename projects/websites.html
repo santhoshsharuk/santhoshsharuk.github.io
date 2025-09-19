@@ -151,72 +151,8 @@
       </p>
 
       <!-- Project Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-        <!-- PROJECT CARD 1 - START (Copy this block to add more projects) -->
-        <div class="project-card glass rounded-2xl overflow-hidden backdrop-blur-lg">
-          <div class="aspect-video relative overflow-hidden">
-            <img src="https://via.placeholder.com/600x400/111827/FFFFFF.png?text=Your+Project+Screenshot" alt="E-Commerce Platform" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
-          </div>
-          <div class="p-6">
-            <h3 class="font-display text-2xl font-semibold mb-2">E-Commerce Platform</h3>
-            <p class="text-white/70 text-sm mb-4">A modern e-commerce site built with React, focusing on a seamless shopping experience and performance.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="text-xs glass px-2 py-1 rounded-full">React</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">Node.js</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">MongoDB</span>
-            </div>
-            <div class="flex items-center gap-4 mt-6">
-              <a href="#" class="text-sm font-medium hover:text-gradient transition-colors">Live Demo &rarr;</a>
-              <a href="#" class="text-sm font-medium hover:text-gradient transition-colors">View Code &rarr;</a>
-            </div>
-          </div>
-        </div>
-        <!-- PROJECT CARD 1 - END -->
-        
-        <!-- PROJECT CARD 2 - START -->
-        <div class="project-card glass rounded-2xl overflow-hidden backdrop-blur-lg">
-          <div class="aspect-video relative overflow-hidden">
-            <img src="https://via.placeholder.com/600x400/1f2937/FFFFFF.png?text=Your+Project+Screenshot" alt="Corporate Portfolio" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
-          </div>
-          <div class="p-6">
-            <h3 class="font-display text-2xl font-semibold mb-2">Corporate Portfolio</h3>
-            <p class="text-white/70 text-sm mb-4">A sleek and professional portfolio website for a design agency, built with Vue.js and GSAP animations.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="text-xs glass px-2 py-1 rounded-full">Vue.js</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">Tailwind CSS</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">Netlify</span>
-            </div>
-            <div class="flex items-center gap-4 mt-6">
-              <a href="#" class="text-sm font-medium hover:text-gradient transition-colors">Live Demo &rarr;</a>
-            </div>
-          </div>
-        </div>
-        <!-- PROJECT CARD 2 - END -->
-        
-        <!-- PROJECT CARD 3 - START -->
-        <div class="project-card glass rounded-2xl overflow-hidden backdrop-blur-lg">
-          <div class="aspect-video relative overflow-hidden">
-            <img src="https://via.placeholder.com/600x400/374151/FFFFFF.png?text=Your+Project+Screenshot" alt="SaaS Landing Page" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
-          </div>
-          <div class="p-6">
-            <h3 class="font-display text-2xl font-semibold mb-2">SaaS Landing Page</h3>
-            <p class="text-white/70 text-sm mb-4">A high-conversion landing page for a SaaS product, focused on clean design and clear calls-to-action.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="text-xs glass px-2 py-1 rounded-full">HTML5</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">SASS</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">JavaScript</span>
-            </div>
-            <div class="flex items-center gap-4 mt-6">
-              <a href="#" class="text-sm font-medium hover:text-gradient transition-colors">Live Demo &rarr;</a>
-              <a href="#" class="text-sm font-medium hover:text-gradient transition-colors">View Code &rarr;</a>
-            </div>
-          </div>
-        </div>
-        <!-- PROJECT CARD 3 - END -->
-        
-        <!-- Add more project cards here by copying one of the blocks above -->
-        
+      <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project cards will be dynamically inserted here -->
       </div>
     </div>
   </main>
@@ -257,17 +193,77 @@
       
       // Mouse follower functionality for desktop
       const mouseFollower = document.querySelector('.mouse-follower');
-      if (window.innerWidth > 768 && mouseFollower) {
-        document.addEventListener('mousemove', (e) => {
-          mouseFollower.style.left = e.clientX + 'px';
-          mouseFollower.style.top = e.clientY + 'px';
-        });
-        const interactiveElements = document.querySelectorAll('a, button, .project-card');
-        interactiveElements.forEach(el => {
-          el.addEventListener('mouseenter', () => mouseFollower.classList.add('active'));
-          el.addEventListener('mouseleave', () => mouseFollower.classList.remove('active'));
-        });
-      }
+      const setupMouseFollower = () => {
+        if (window.innerWidth > 768 && mouseFollower) {
+          document.addEventListener('mousemove', (e) => {
+            mouseFollower.style.left = e.clientX + 'px';
+            mouseFollower.style.top = e.clientY + 'px';
+          });
+          const interactiveElements = document.querySelectorAll('a, button, .project-card');
+          interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => mouseFollower.classList.add('active'));
+            el.addEventListener('mouseleave', () => mouseFollower.classList.remove('active'));
+          });
+        }
+      };
+
+      // Function to load projects from JSON
+      const loadProjects = async () => {
+        try {
+          const response = await fetch('./data/website.json');
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const projects = await response.json();
+          const projectGrid = document.getElementById('project-grid');
+          
+          if (projectGrid) {
+            projectGrid.innerHTML = ''; // Clear existing content
+            projects.forEach(project => {
+              const tagsHtml = project.tags.map(tag => `<span class="text-xs glass px-2 py-1 rounded-full">${tag}</span>`).join('');
+              
+              const codeLinkHtml = project.code_link !== 'none' 
+                ? `<a href="${project.code_link}" class="text-sm font-medium hover:text-gradient transition-colors">View Code &rarr;</a>`
+                : '';
+
+              const liveLinkHtml = project.live_link !== 'none'
+                ? `<a href="${project.live_link}" class="text-sm font-medium hover:text-gradient transition-colors">Live Demo &rarr;</a>`
+                : '';
+
+              const projectCard = `
+                <div class="project-card glass rounded-2xl overflow-hidden backdrop-blur-lg">
+                  <div class="aspect-video relative overflow-hidden">
+                    <img src="${project.cover_image}" alt="${project.name}" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                  </div>
+                  <div class="p-6">
+                    <h3 class="font-display text-2xl font-semibold mb-2">${project.name}</h3>
+                    <p class="text-white/70 text-sm mb-4">${project.description}</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      ${tagsHtml}
+                    </div>
+                    <div class="flex items-center gap-4 mt-6">
+                      ${liveLinkHtml}
+                      ${codeLinkHtml}
+                    </div>
+                  </div>
+                </div>
+              `;
+              projectGrid.innerHTML += projectCard;
+            });
+
+            // Re-initialize mouse follower for new elements
+            setupMouseFollower();
+          }
+        } catch (error) {
+          console.error("Could not load projects:", error);
+          const projectGrid = document.getElementById('project-grid');
+          if(projectGrid) {
+            projectGrid.innerHTML = '<p class="text-white/70 col-span-full text-center">Failed to load projects. Please try again later.</p>';
+          }
+        }
+      };
+
+      loadProjects();
     });
   </script>
 </body>

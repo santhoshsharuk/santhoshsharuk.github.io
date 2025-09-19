@@ -150,105 +150,8 @@
       </p>
 
       <!-- Project Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-        <!-- PROJECT CARD 1 - START (Copy this block to add more projects) -->
-        <div class="project-card glass rounded-2xl overflow-hidden backdrop-blur-lg flex flex-col">
-          <!-- Browser Frame -->
-          <div class="p-4">
-            <div class="glass rounded-lg overflow-hidden">
-              <div class="h-8 bg-black/20 flex items-center px-3 gap-2">
-                <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                <div class="w-3 h-3 rounded-full bg-green-500"></div>
-              </div>
-              <div class="aspect-video bg-black/30">
-                <img src="https://via.placeholder.com/600x400/111827/FFFFFF.png?text=Dashboard+UI+Screenshot" alt="Project Management Dashboard" class="w-full h-full object-cover browser-screen">
-              </div>
-            </div>
-          </div>
-          <!-- App Details -->
-          <div class="p-6 pt-2 flex flex-col flex-grow">
-            <h3 class="font-display text-2xl font-semibold mb-2">Project Management Dashboard</h3>
-            <p class="text-white/70 text-sm mb-4 flex-grow">A SaaS platform for teams to manage tasks, track progress with Kanban boards, and collaborate in real-time.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="text-xs glass px-2 py-1 rounded-full">React</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">Node.js</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">Socket.IO</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">PostgreSQL</span>
-            </div>
-            <div class="flex items-center gap-4 mt-auto pt-4">
-              <a href="#" class="text-sm font-medium hover:text-gradient transition-colors">Live Demo &rarr;</a>
-              <a href="#" class="text-sm font-medium hover:text-gradient transition-colors">View Code &rarr;</a>
-            </div>
-          </div>
-        </div>
-        <!-- PROJECT CARD 1 - END -->
-        
-        <!-- PROJECT CARD 2 - START -->
-        <div class="project-card glass rounded-2xl overflow-hidden backdrop-blur-lg flex flex-col">
-          <!-- Browser Frame -->
-          <div class="p-4">
-            <div class="glass rounded-lg overflow-hidden">
-              <div class="h-8 bg-black/20 flex items-center px-3 gap-2">
-                <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                <div class="w-3 h-3 rounded-full bg-green-500"></div>
-              </div>
-              <div class="aspect-video bg-black/30">
-                <img src="https://via.placeholder.com/600x400/1f2937/FFFFFF.png?text=AI+Tool+Screenshot" alt="AI Content Generation Tool" class="w-full h-full object-cover browser-screen">
-              </div>
-            </div>
-          </div>
-          <!-- App Details -->
-          <div class="p-6 pt-2 flex flex-col flex-grow">
-            <h3 class="font-display text-2xl font-semibold mb-2">AI Content Generation Tool</h3>
-            <p class="text-white/70 text-sm mb-4 flex-grow">A web app that leverages the OpenAI API to help users generate marketing copy, blog posts, and other creative text.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="text-xs glass px-2 py-1 rounded-full">Vue.js</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">Python</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">Flask</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">OpenAI API</span>
-            </div>
-            <div class="flex items-center gap-4 mt-auto pt-4">
-              <a href="#" class="text-sm font-medium hover:text-gradient transition-colors">Try The Tool &rarr;</a>
-            </div>
-          </div>
-        </div>
-        <!-- PROJECT CARD 2 - END -->
-
-        <!-- PROJECT CARD 3 - START -->
-        <div class="project-card glass rounded-2xl overflow-hidden backdrop-blur-lg flex flex-col">
-          <!-- Browser Frame -->
-          <div class="p-4">
-            <div class="glass rounded-lg overflow-hidden">
-              <div class="h-8 bg-black/20 flex items-center px-3 gap-2">
-                <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                <div class="w-3 h-3 rounded-full bg-green-500"></div>
-              </div>
-              <div class="aspect-video bg-black/30">
-                <img src="https://via.placeholder.com/600x400/374151/FFFFFF.png?text=CRM+Screenshot" alt="Customer Relationship Management (CRM)" class="w-full h-full object-cover browser-screen">
-              </div>
-            </div>
-          </div>
-          <!-- App Details -->
-          <div class="p-6 pt-2 flex flex-col flex-grow">
-            <h3 class="font-display text-2xl font-semibold mb-2">CRM System</h3>
-            <p class="text-white/70 text-sm mb-4 flex-grow">A full-featured CRM for small businesses to manage leads, customers, and sales pipelines with secure authentication.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="text-xs glass px-2 py-1 rounded-full">Django</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">Tailwind CSS</span>
-              <span class="text-xs glass px-2 py-1 rounded-full">REST API</span>
-            </div>
-            <div class="flex items-center gap-4 mt-auto pt-4">
-              <a href="#" class="text-sm font-medium hover:text-gradient transition-colors">Live Demo &rarr;</a>
-              <a href="#" class="text-sm font-medium hover:text-gradient transition-colors">View Code &rarr;</a>
-            </div>
-          </div>
-        </div>
-        <!-- PROJECT CARD 3 - END -->
-        
+      <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Projects will be dynamically loaded here -->
       </div>
     </div>
   </main>
@@ -287,19 +190,88 @@
         }
       });
       
-      // Mouse follower functionality for desktop
       const mouseFollower = document.querySelector('.mouse-follower');
-      if (window.innerWidth > 768 && mouseFollower) {
-        document.addEventListener('mousemove', (e) => {
-          mouseFollower.style.left = e.clientX + 'px';
-          mouseFollower.style.top = e.clientY + 'px';
-        });
-        const interactiveElements = document.querySelectorAll('a, button, .project-card');
-        interactiveElements.forEach(el => {
-          el.addEventListener('mouseenter', () => mouseFollower.classList.add('active'));
-          el.addEventListener('mouseleave', () => mouseFollower.classList.remove('active'));
-        });
-      }
+      const setupMouseFollower = () => {
+        if (window.innerWidth > 768 && mouseFollower) {
+          document.addEventListener('mousemove', (e) => {
+            mouseFollower.style.left = e.clientX + 'px';
+            mouseFollower.style.top = e.clientY + 'px';
+          });
+          const interactiveElements = document.querySelectorAll('a, button, .project-card');
+          interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => mouseFollower.classList.add('active'));
+            el.addEventListener('mouseleave', () => mouseFollower.classList.remove('active'));
+          });
+        }
+      };
+
+      const loadProjects = async () => {
+        try {
+          const response = await fetch('./data/web-app.json');
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const projects = await response.json();
+          const projectGrid = document.getElementById('project-grid');
+          
+          if (projectGrid) {
+            projectGrid.innerHTML = ''; // Clear existing content
+            projects.forEach(project => {
+              const tagsHtml = project.tags.map(tag => `<span class="text-xs glass px-2 py-1 rounded-full">${tag}</span>`).join('');
+              
+              const codeLinkHtml = project.code_link !== 'none' 
+                ? `<a href="${project.code_link}" class="text-sm font-medium hover:text-gradient transition-colors">View Code &rarr;</a>`
+                : '';
+              
+              const liveLinkHtml = project.live_link !== 'none'
+                ? `<a href="${project.live_link}" class="text-sm font-medium hover:text-gradient transition-colors">${project.live_link_text} &rarr;</a>`
+                : '';
+
+              const projectCard = `
+                <div class="project-card glass rounded-2xl overflow-hidden backdrop-blur-lg flex flex-col">
+                  <!-- Browser Frame -->
+                  <div class="p-4">
+                    <div class="glass rounded-lg overflow-hidden">
+                      <div class="h-8 bg-black/20 flex items-center px-3 gap-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                      </div>
+                      <div class="aspect-video bg-black/30">
+                        <img src="${project.cover_image}" alt="${project.name}" class="w-full h-full object-cover browser-screen">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- App Details -->
+                  <div class="p-6 pt-2 flex flex-col flex-grow">
+                    <h3 class="font-display text-2xl font-semibold mb-2">${project.name}</h3>
+                    <p class="text-white/70 text-sm mb-4 flex-grow">${project.description}</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      ${tagsHtml}
+                    </div>
+                    <div class="flex items-center gap-4 mt-auto pt-4">
+                      ${liveLinkHtml}
+                      ${codeLinkHtml}
+                    </div>
+                  </div>
+                </div>
+              `;
+              projectGrid.innerHTML += projectCard;
+            });
+            
+            // Re-initialize mouse follower for new elements
+            setupMouseFollower();
+          }
+        } catch (error) {
+          console.error("Could not load projects:", error);
+          const projectGrid = document.getElementById('project-grid');
+          if(projectGrid) {
+            projectGrid.innerHTML = '<p class="text-white/70 col-span-full text-center">Failed to load projects. Please try again later.</p>';
+          }
+        }
+      };
+
+      loadProjects();
     });
   </script>
 </body>

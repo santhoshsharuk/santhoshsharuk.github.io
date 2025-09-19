@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Podcast AI Model",
+    "completion_date": "",
+    "description": "This project allows anyone to generate, process, and publish podcasts automatically with the help of AI models (speech synthesis, transcription, and enhancement).",
+    "cover_image": "https://via.placeholder.com/600x400/111827/FFFFFF.png?text=Podcast+AI",
+    "tags": ["AI", "Python", "Speech Synthesis", "Transcription"],
+    "live_link": "https://santhoshsharuk.me/-Podcast-AI-Model/",
+    "code_link": "https://github.com/santhoshsharuk/-Podcast-AI-Model"
+  },
+  {
+    "name": "AI Weather Station MVP",
+    "completion_date": "",
+    "description": "A minimal AI-enhanced weather station built with Arduino UNO that collects temperature, humidity, and atmospheric pressure data, and provides a basic weather forecast using rule-based logic.",
+    "cover_image": "https://via.placeholder.com/600x400/1f2937/FFFFFF.png?text=AI+Weather+Station",
+    "tags": ["Arduino", "IoT", "AI", "Sensors"],
+    "live_link": "https://santhoshsharuk.me/-AI-Weather-Station-MVP-/",
+    "code_link": "https://github.com/santhoshsharuk/-AI-Weather-Station-MVP-"
+  },
+  {
+    "name": "NarratoAI (Hearify)",
+    "completion_date": "",
+    "description": "NarratoAI converts any article, blog, or webpage into natural-sounding audio instantly. Paste a URL or upload text, choose your preferred voice, and listen anywhere. Perfect for commuting, studying, or multitasking, with downloadable MP3s and optional summarization for faster listening.",
+    "cover_image": "https://via.placeholder.com/600x400/374151/FFFFFF.png?text=NarratoAI",
+    "tags": ["Text-to-Speech", "AI", "Web App", "Audio"],
+    "live_link": "https://santhoshsharuk.me/Hearify/",
+    "code_link": "https://github.com/santhoshsharuk/Hearify"
+  },
+  {
+    "name": "MyAgriBot",
+    "completion_date": "",
+    "description": "Your Farming Assistant in Your Pocket. MyAgriBot provides real-time agricultural information, weather forecasts, and market prices right in your Telegram app. Get instant access to farming knowledge whenever you need it!",
+    "cover_image": "https://via.placeholder.com/600x400/4b5563/FFFFFF.png?text=MyAgriBot",
+    "tags": ["Telegram Bot", "Agriculture", "Python", "AI"],
+    "live_link": "https://santhoshsharuk.me/My_Agri_Telegram_bot/",
+    "code_link": "https://github.com/santhoshsharuk/My_Agri_Telegram_bot"
+  },
+  {
+    "name": "LobeHub Icon Helper",
+    "completion_date": "",
+    "description": "Search, preview, and insert LobeHub icons directly in VS Code without leaving your editor (VS Code extension).",
+    "cover_image": "https://via.placeholder.com/600x400/6b7280/FFFFFF.png?text=VS+Code+Extension",
+    "tags": ["VS Code", "Extension", "Developer Tool"],
+    "live_link": "https://santhoshsharuk.me/lobehub-icon-helper/",
+    "code_link": "https://github.com/santhoshsharuk/lobehub-icon-helper"
+  },
+  {
+    "name": "Fintracker",
+    "completion_date": "",
+    "description": "Track money. Achieve goals. Live better. A free, privacy-first finance tracker designed to turn your daily actions into progress. Set goals, budget with intent, and follow simple money laws that keep life on track.",
+    "cover_image": "https://via.placeholder.com/600x400/9ca3af/FFFFFF.png?text=Fintracker",
+    "tags": ["Finance", "Budgeting", "Web App", "Privacy"],
+    "live_link": "https://santhoshsharuk.me/fintracker/",
+    "code_link": "https://github.com/santhoshsharuk/fintracker"
+  },
+  {
+    "name": "CareerAI Website",
+    "completion_date": "",
+    "description": "Land Your Dream Job Faster with AI. Stop guessing what recruiters want. Our platform helps you build an ATS-friendly resume, write compelling cover letters, and optimize your LinkedIn profile in minutes.",
+    "cover_image": "https://via.placeholder.com/600x400/d1d5db/000000.png?text=CareerAI",
+    "tags": ["AI", "Career", "Resume Builder", "Web Platform"],
+    "live_link": "https://santhoshsharuk.me/careeraiwebsite/",
+    "code_link": "https://github.com/santhoshsharuk/careeraiwebsite"
+  },
+  {
+    "name": "WA Bulk Message Sender",
+    "completion_date": "",
+    "description": "Automate sending personalized WhatsApp messages to multiple contacts using Python + Selenium.",
+    "cover_image": "https://via.placeholder.com/600x400/e5e7eb/000000.png?text=WhatsApp+Automator",
+    "tags": ["Python", "Selenium", "Automation", "WhatsApp"],
+    "live_link": "https://santhoshsharuk.me/WA_bulk_msg_sender/",
+    "code_link": "https://github.com/santhoshsharuk/WA_bulk_msg_sender"
+  },
+  {
+    "name": "Img-Remover AI",
+    "completion_date": "",
+    "description": "Img-Remover AI uses the Python rembg library to remove backgrounds from images.",
+    "cover_image": "https://via.placeholder.com/600x400/f3f4f6/000000.png?text=BG+Remover",
+    "tags": ["Python", "AI", "Image Processing", "rembg"],
+    "live_link": "https://santhoshsharuk.me/bgremover/",
+    "code_link": "https://github.com/santhoshsharuk/bgremover"
+  },
+  {
+    "name": "AquaAgri Ecosystem",
+    "completion_date": "",
+    "description": "Empowering communities with smart, sustainable agricultural solutions.",
+    "cover_image": "https://via.placeholder.com/600x400/93c5fd/FFFFFF.png?text=AquaAgri",
+    "tags": ["Agriculture", "Sustainability", "Smart Farming"],
+    "live_link": "https://santhoshsharuk.me/aquaagri/",
+    "code_link": "https://github.com/santhoshsharuk/aquaagri"
+  },
+  {
+    "name": "MadeToLead Website",
+    "completion_date": "",
+    "description": "Growing a business is like raising a child — it needs the right care, the right environment, and the right systems. At MadeToLead, we blend strategy, AI insights, and automation to fuel unstoppable growth (digital marketing company website).",
+    "cover_image": "https://via.placeholder.com/600x400/60a5fa/FFFFFF.png?text=MadeToLead",
+    "tags": ["Digital Marketing", "AI", "Automation", "Business"],
+    "live_link": "https://santhoshsharuk.me/Made2Lead_website/",
+    "code_link": "https://github.com/santhoshsharuk/Made2Lead_website"
+  },
+  {
+    "name": "Self-Organizing Maps Simulation",
+    "completion_date": "",
+    "description": "Self-Organizing Maps: Learn by Seeing. An intuitive, visual guide to how machines cluster and understand data.",
+    "cover_image": "https://via.placeholder.com/600x400/3b82f6/FFFFFF.png?text=SOM+Simulation",
+    "tags": ["Machine Learning", "Data Visualization", "Simulation"],
+    "live_link": "https://santhoshsharuk.me/som/",
+    "code_link": "https://github.com/santhoshsharuk/som"
+  },
+  {
+    "name": "Funny Development Portfolio",
+    "completion_date": "",
+    "description": "A funny and creative development portfolio website.",
+    "cover_image": "https://via.placeholder.com/600x400/2563eb/FFFFFF.png?text=Portfolio",
+    "tags": ["Portfolio", "Web Development", "Creative"],
+    "live_link": "https://santhoshsharuk.me/portfolio/",
+    "code_link": "https://github.com/santhoshsharuk/portfolio"
+  },
+  {
+    "name": "VoxCMD: Offline AI Voice Command",
+    "completion_date": "",
+    "description": "Take control of your system with voice commands that work completely offline. Enhanced security, powerful automation, zero data sharing.",
+    "cover_image": "https://via.placeholder.com/600x400/1d4ed8/FFFFFF.png?text=VoxCMD",
+    "tags": ["AI", "Voice Command", "Offline", "Automation", "Security"],
+    "live_link": "https://santhoshsharuk.me/voxcmd/",
+    "code_link": "https://github.com/santhoshsharuk/voxcmd"
+  }
+]

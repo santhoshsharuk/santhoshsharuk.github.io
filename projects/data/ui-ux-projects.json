@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Mobile Banking App Redesign",
+    "role": "Lead UI/UX Designer",
+    "description": "A complete redesign of a mobile banking app focused on simplifying user flows and improving accessibility.",
+    "cover_image": "https://via.placeholder.com/600x400/111827/FFFFFF.png?text=Mobile+App+Design",
+    "tags": ["Figma", "User Research", "Prototyping"],
+    "links": [
+      { "url": "#", "text": "View Figma File &rarr;" },
+      { "url": "#", "text": "Interactive Prototype &rarr;" }
+    ]
+  },
+  {
+    "title": "Analytics Dashboard UI",
+    "role": "Product Designer",
+    "description": "Designed a complex data visualization dashboard for a SaaS product, ensuring clarity and ease of use for complex datasets.",
+    "cover_image": "https://via.placeholder.com/600x400/1f2937/FFFFFF.png?text=Web+Dashboard+UI",
+    "tags": ["Figma", "Component Library", "Data Viz"],
+    "links": [
+      { "url": "#", "text": "View Figma File &rarr;" }
+    ]
+  },
+  {
+    "title": "E-commerce Checkout Flow",
+    "role": "UX Researcher & Designer",
+    "description": "A UX case study focused on identifying pain points and redesigning a checkout process to reduce cart abandonment.",
+    "cover_image": "https://via.placeholder.com/600x400/374151/FFFFFF.png?text=E-commerce+Case+Study",
+    "tags": ["Wireframing", "User Testing", "Case Study"],
+    "links": [
+      { "url": "#", "text": "Read Case Study &rarr;" }
+    ]
+  }
+]
