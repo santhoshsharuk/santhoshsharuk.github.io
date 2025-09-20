@@ -14,14 +14,14 @@
     "description": "A minimal AI-enhanced weather station built with Arduino UNO that collects temperature, humidity, and atmospheric pressure data, and provides a basic weather forecast using rule-based logic.",
     "cover_image": "https://via.placeholder.com/600x400/1f2937/FFFFFF.png?text=AI+Weather+Station",
     "tags": ["Arduino", "IoT", "AI", "Sensors"],
-    "live_link": "https://santhoshsharuk.me/-AI-Weather-Station-MVP-/",
+    "live_link": "https://santhoshsharuk.me/projects/images/aiweather.png",
     "code_link": "https://github.com/santhoshsharuk/-AI-Weather-Station-MVP-"
   },
   {
     "name": "NarratoAI (Hearify)",
     "completion_date": "",
     "description": "NarratoAI converts any article, blog, or webpage into natural-sounding audio instantly. Paste a URL or upload text, choose your preferred voice, and listen anywhere. Perfect for commuting, studying, or multitasking, with downloadable MP3s and optional summarization for faster listening.",
-    "cover_image": "https://via.placeholder.com/600x400/374151/FFFFFF.png?text=NarratoAI",
+    "cover_image": "https://santhoshsharuk.me/projects/images/hearify.png",
     "tags": ["Text-to-Speech", "AI", "Web App", "Audio"],
     "live_link": "https://santhoshsharuk.me/Hearify/",
     "code_link": "https://github.com/santhoshsharuk/Hearify"
