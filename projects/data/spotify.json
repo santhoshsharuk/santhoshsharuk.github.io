@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "AI Development Focus",
+    "description": "Deep focus electronic and ambient tracks for coding AI models.",
+    "creator": "Santhosh Sharuk",
+    "cover_image": "https://images.unsplash.com/photo-1677756119517-756a188d2d94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    "songs": [
+      { "title": "Genesis", "artist": "Grimes", "album": "Visions", "duration": "4:15" },
+      { "title": "Midnight City", "artist": "M83", "album": "Hurry Up, We're Dreaming", "duration": "4:04" },
+      { "title": "Boring Angel", "artist": "Oneohtrix Point Never", "album": "R Plus Seven", "duration": "4:17" }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Frontend Flow State",
+    "description": "Upbeat and instrumental tracks to power through UI/UX design.",
+    "creator": "Santhosh Sharuk",
+    "cover_image": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    "songs": [
+      { "title": "Music To My Eyes", "artist": "T-Mass & Enthic", "album": "Single", "duration": "3:25" },
+      { "title": "Shelter", "artist": "Porter Robinson & Madeon", "album": "Shelter", "duration": "3:39" }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Serverless & Chill",
+    "description": "Lofi hip hop beats for architecting backend solutions.",
+    "creator": "Santhosh Sharuk",
+    "cover_image": "https://images.unsplash.com/photo-1517994112540-009c47ea476b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    "songs": [
+      { "title": "Affection", "artist": "Jinsang", "album": "Solitude", "duration": "2:41" },
+      { "title": "Controlla", "artist": "Idealism", "album": "rainy season", "duration": "2:02" }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Wasm & Wireframes",
+    "description": "High-energy synthwave for high-performance coding sessions.",
+    "creator": "Santhosh Sharuk",
+    "cover_image": "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    "songs": [
+      { "title": "Nightcall", "artist": "Kavinsky", "album": "OutRun", "duration": "4:19" },
+      { "title": "Resonance", "artist": "Home", "album": "Odyssey", "duration": "3:32" }
+    ]
+  }
+]
