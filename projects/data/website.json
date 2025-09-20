@@ -3,7 +3,7 @@
     "name": "Podcast AI Model",
     "completion_date": "",
     "description": "This project allows anyone to generate, process, and publish podcasts automatically with the help of AI models (speech synthesis, transcription, and enhancement).",
-    "cover_image": "https://via.placeholder.com/600x400/111827/FFFFFF.png?text=Podcast+AI",
+    "cover_image": "./projects/images/podcastai.png",
     "tags": ["AI", "Python", "Speech Synthesis", "Transcription"],
     "live_link": "https://santhoshsharuk.me/-Podcast-AI-Model/",
     "code_link": "https://github.com/santhoshsharuk/-Podcast-AI-Model"
