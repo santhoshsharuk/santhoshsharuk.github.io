@@ -14,17 +14,13 @@
             'sans': ['Plus Jakarta Sans', 'sans-serif'],
             'display': ['Clash Display', 'sans-serif'],
           },
-          colors: {
-            glass: 'rgba(255, 255, 255, 0.05)',
-            'glass-stroke': 'rgba(255, 255, 255, 0.1)',
-          },
           animation: {
             'reveal': 'reveal 0.8s forwards',
             'cosmic-flow': 'cosmic-flow 20s linear infinite',
           },
           keyframes: {
             reveal: { '0%': { opacity: 0, transform: 'translateY(30px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } },
-            'cosmic-flow': { '0%': { background-position: '0% 50%' }, '100%': { background-position: '200% 50%' } },
+            'cosmic-flow': { '0%': { 'background-position': '0% 50%' }, '50%': { 'background-position': '100% 50%' }, '100%': { 'background-position': '0% 50%' } },
           },
         }
       }
@@ -56,101 +52,71 @@
     
     .noise-overlay {
         position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-        background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY tribulationslIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=');
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY2RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=');
         pointer-events: none; z-index: 100; opacity: 0.5;
     }
 
     /* --- Enhanced Timeline Styles --- */
     #timeline-path {
-      position: absolute;
-      left: 50%;
-      top: 0;
-      width: 400px;
-      height: 100%;
+      position: absolute; left: 50%; top: 0; width: 400px; height: 100%;
       transform: translateX(-50%);
-      background: linear-gradient(180deg, 
-        transparent 0%, 
-        var(--glow-purple) 15%, 
-        var(--glow-pink) 35%, 
-        var(--glow-blue) 60%, 
-        var(--glow-indigo) 80%, 
-        transparent 100%
-      );
-      background-size: 100% 200%;
-      filter: blur(80px);
-      opacity: 0.15;
-      animation: cosmic-flow 20s linear infinite alternate;
+      background: linear-gradient(180deg, transparent 0%, var(--glow-purple) 15%, var(--glow-pink) 35%, var(--glow-blue) 60%, var(--glow-indigo) 80%, transparent 100%);
+      background-size: 100% 200%; filter: blur(80px); opacity: 0.15;
+      animation: cosmic-flow 20s linear infinite;
     }
     
     .timeline-item {
-      position: relative;
-      width: calc(50% - 4rem);
-      opacity: 0;
+      position: relative; width: calc(50% - 4rem); opacity: 0;
       transform: translateY(50px);
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
-    .timeline-item.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .timeline-item.is-visible { opacity: 1; transform: translateY(0); }
     .timeline-item:nth-child(even) { align-self: flex-end; }
     
     .timeline-card {
       position: relative;
-      background: rgba(12, 5, 29, 0.5);
-      backdrop-filter: blur(16px);
+      background: rgba(12, 5, 29, 0.5); backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 1rem;
-      padding: 1.5rem;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1rem;
+      padding: 1.5rem; transition: transform 0.4s ease, box-shadow 0.4s ease;
       transform-style: preserve-3d;
+      --parallax-y: 0; /* Custom property for JS to update */
+      transform: translateY(var(--parallax-y));
     }
     .timeline-card:hover {
-      transform: perspective(1000px) rotateX(2deg) rotateY(-4deg) scale(1.05);
+      transform: perspective(1000px) translateY(var(--parallax-y)) rotateX(2deg) rotateY(-4deg) scale(1.05);
       box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     }
     .timeline-item:nth-child(even) .timeline-card:hover {
-        transform: perspective(1000px) rotateX(2deg) rotateY(4deg) scale(1.05);
+        transform: perspective(1000px) translateY(var(--parallax-y)) rotateX(2deg) rotateY(4deg) scale(1.05);
     }
 
     .card-glow {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
+      content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
       border-radius: 1rem;
       background: radial-gradient(circle at 50% 0%, var(--glow-color, #fff), transparent 70%);
-      opacity: 0.15;
-      transition: opacity 0.4s ease;
+      opacity: 0.15; transition: opacity 0.4s ease;
     }
     .timeline-card:hover .card-glow { opacity: 0.3; }
     
     .timeline-connector {
-        position: absolute;
-        top: 2.5rem;
-        width: 4rem;
-        height: 1px;
+        position: absolute; top: 2.5rem; width: 4rem; height: 1px;
         background: linear-gradient(to left, rgba(255,255,255,0.2), transparent);
     }
     .timeline-item:nth-child(odd) .timeline-connector { right: -4rem; }
     .timeline-item:nth-child(even) .timeline-connector { left: -4rem; transform: scaleX(-1); }
 
     .timeline-year {
-      position: relative;
-      z-index: 10;
-      background: rgba(12, 5, 29, 0.8);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.1);
-      padding: 0.5rem 1.5rem;
-      border-radius: 99px;
+      position: relative; z-index: 10; background: rgba(12, 5, 29, 0.8);
+      backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1);
+      padding: 0.5rem 1.5rem; border-radius: 99px;
     }
 
-    /* Mobile Timeline */
     @media (max-width: 768px) {
-      #timeline-path { left: 2rem; width: 150px; }
-      .timeline-item { width: 100%; align-self: center; padding-left: 4rem; }
+      #timeline-path { left: 1rem; width: 150px; }
+      .timeline-item { width: 100%; align-self: center; padding-left: 2.5rem; }
       .timeline-item:nth-child(even) { align-self: center; }
-      .timeline-connector { left: 0; }
+      .timeline-connector { left: -1.5rem; width: 1.5rem; }
     }
   </style>
 </head>
@@ -164,8 +130,8 @@
     <div class="max-w-5xl mx-auto relative z-10">
       
       <div class="mb-12">
-        <a href="../home.html#works" class="inline-flex items-center text-sm text-white/70 hover:text-white transition-colors group">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+        <a href="../index.html#works" class="inline-flex items-center text-sm text-white/70 hover:text-white transition-colors group" aria-label="Back to portfolio works section">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 transition-transform group-hover:-translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
           Back to Portfolio
         </a>
       </div>
@@ -185,7 +151,7 @@
               <!-- Timeline items will be dynamically inserted here -->
           </div>
           <div id="loading-state" class="text-center text-white/70 py-16">
-            <div class="text-xl">Loading project history...</div>
+            <div class="text-xl font-display">Loading project history...</div>
           </div>
       </div>
 
@@ -195,12 +161,12 @@
   <footer class="relative pt-20 pb-10 px-4 md:px-16 mt-20 border-t border-white/10">
     <div class="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row justify-between items-center">
         <div class="mb-6 md:mb-0 text-center md:text-left">
-            <a href="../home.html" class="text-xl font-display font-medium text-gradient">Santhosh Sharuk</a>
+            <a href="../index.html" class="text-xl font-display font-medium text-gradient">Santhosh Sharuk</a>
             <div class="text-white/50 text-sm mt-2">© 2025 All rights reserved</div>
         </div>
         <div class="flex justify-center mt-4 md:mt-0">
-            <a href="../home.html#works" class="inline-flex items-center px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm hover:bg-white/10 transition-all">
-                <span class="mr-2">Back to Portfolio</span>
+            <a href="#" class="inline-flex items-center px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm hover:bg-white/10 transition-all" aria-label="Scroll to top of page">
+                <span class="mr-2">Back to Top</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
             </a>
         </div>
@@ -212,29 +178,58 @@
         const timelineContainer = document.getElementById('timeline-container');
         const loadingState = document.getElementById('loading-state');
 
+        // Configuration for project data sources
         const dataSources = [
-            { url: './data/website.json', category: 'Website', page: 'website.html' },
-            { url: './data/web-app.json', category: 'Web App', page: 'web-app.html' },
-            { url: './data/mobile-app.json', category: 'Mobile App', page: 'mobile-app.html' },
-            { url: './data/ai-projects.json', category: 'AI / ML', page: 'ai.html' },
+            { url: './data/website.json', category: 'Website', page: 'websites.html' },
+            { url: './data/web-app.json', category: 'Web App', page: 'web-apps.html' },
+            { url: './data/mobile-app.json', category: 'Mobile App', page: 'mobile-apps.html' },
+            { url: './data/ai-projects.json', category: 'AI / ML', page: 'ai-projects.html' },
             { url: './data/saas-projects.json', category: 'SaaS', page: 'saas.html' },
             { url: './data/ui-ux-projects.json', category: 'UI/UX', page: 'ui-ux.html' }
         ];
         
+        // Styling and icons for each category
         const categoryInfo = {
-            'Website':    { color: 'var(--glow-purple)', icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>` },
-            'Web App':    { color: 'var(--glow-blue)', icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>` },
-            'Mobile App': { color: 'var(--glow-green)', icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>` },
-            'AI / ML':    { color: 'var(--glow-indigo)', icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>` },
-            'SaaS':       { color: 'var(--glow-purple)', icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>` },
-            'UI/UX':      { color: 'var(--glow-pink)', icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.472-2.472a3.375 3.375 0 00-4.773-4.773L6.23 11.42m5.19 3.75L6.23 11.42m1.114-1.114a2.25 2.25 0 013.182 0l2.472 2.472a2.25 2.25 0 010 3.182L8.684 19.542a2.25 2.25 0 01-3.182 0l-1.114-1.114a2.25 2.25 0 010-3.182l5.19-5.19z" /></svg>` }
+            'Website':    { color: 'var(--glow-purple)', icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>` },
+            'Web App':    { color: 'var(--glow-blue)', icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>` },
+            'Mobile App': { color: 'var(--glow-green)', icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>` },
+            'AI / ML':    { color: 'var(--glow-indigo)', icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>` },
+            'SaaS':       { color: 'var(--glow-purple)', icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>` },
+            'UI/UX':      { color: 'var(--glow-pink)', icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.472-2.472a3.375 3.375 0 00-4.773-4.773L6.23 11.42m5.19 3.75L6.23 11.42m1.114-1.114a2.25 2.25 0 013.182 0l2.472 2.472a2.25 2.25 0 010 3.182L8.684 19.542a2.25 2.25 0 01-3.182 0l-1.114-1.114a2.25 2.25 0 010-3.182l5.19-5.19z" /></svg>` }
         };
 
         const fetchAllProjects = async () => {
             try {
-                const responses = await Promise.all(dataSources.map(s => fetch(s.url).then(res => res.ok ? res.json() : [])));
-                const projects = responses.flatMap((data, i) => data.map(p => ({ ...p, category: dataSources[i].category, page: dataSources[i].page, name: p.name || p.title })));
-                return projects.filter(p => p.completion_date).sort((a, b) => new Date(b.completion_date) - new Date(a.completion_date));
+                const responses = await Promise.all(
+                    dataSources.map(s => fetch(s.url).then(res => res.ok ? res.json() : Promise.resolve([])).catch(() => []))
+                );
+                
+                const projects = responses.flatMap((data, i) => 
+                    data.map(p => {
+                        // **FIX STARTS HERE**
+                        // 1. Establish the project name first from either `name` or `title` property.
+                        const projectName = p.name || p.title;
+
+                        // 2. If no name is found, skip this item to prevent errors.
+                        if (!projectName) {
+                            return null;
+                        }
+
+                        // 3. Use the reliable `projectName` to build the final object.
+                        return {
+                            ...p,
+                            name: projectName,
+                            id: p.id || projectName.toLowerCase().replace(/\s+/g, '-'),
+                            category: dataSources[i].category,
+                            page: dataSources[i].page,
+                        };
+                        // **FIX ENDS HERE**
+                    })
+                ).filter(Boolean); // .filter(Boolean) conveniently removes any null entries.
+
+                return projects
+                    .filter(p => p.completion_date)
+                    .sort((a, b) => new Date(b.completion_date) - new Date(a.completion_date));
             } catch (error) {
                 console.error("Error fetching projects:", error);
                 loadingState.innerHTML = '<p class="text-center text-red-400">Failed to load project history.</p>';
@@ -244,18 +239,19 @@
 
         const renderTimeline = (projects) => {
             if (projects.length === 0) {
-                loadingState.textContent = 'No projects found.';
+                loadingState.textContent = 'No projects to display.';
                 return;
             }
             loadingState.style.display = 'none';
-            timelineContainer.innerHTML = '';
             
             let currentYear = null;
+            let timelineHTML = '';
+            
             projects.forEach(project => {
                 const projectYear = new Date(project.completion_date).getFullYear();
                 if (projectYear !== currentYear) {
                     currentYear = projectYear;
-                    timelineContainer.innerHTML += `<div class="timeline-year font-display text-4xl text-white/80 my-8 md:my-4">${currentYear}</div>`;
+                    timelineHTML += `<div class="timeline-year font-display text-4xl text-white/80 my-8 md:my-4">${currentYear}</div>`;
                 }
                 
                 const date = new Date(project.completion_date);
@@ -263,47 +259,68 @@
                 const { color, icon } = categoryInfo[project.category] || {};
                 const shortDesc = project.description.substring(0, 120) + (project.description.length > 120 ? '...' : '');
 
-                timelineContainer.innerHTML += `
+                timelineHTML += `
                     <div class="timeline-item w-full">
                         <div class="timeline-connector"></div>
                         <div class="timeline-card" style="--glow-color: ${color};">
                             <div class="card-glow"></div>
                             <div class="relative z-10">
-                                <div class="absolute top-0 right-0 p-2 text-white/30">${icon}</div>
-                                <p class="text-sm font-semibold text-white/50 mb-1">${formattedDate}</p>
+                                <div class="flex justify-between items-start mb-3">
+                                    <p class="text-sm font-semibold text-white/50">${formattedDate}</p>
+                                    <div class="flex items-center gap-2 text-xs uppercase tracking-wider text-white/60 bg-white/5 px-2 py-1 rounded-full">
+                                        ${icon}
+                                        <span>${project.category}</span>
+                                    </div>
+                                </div>
                                 <h3 class="font-display text-2xl font-semibold mb-3 text-white/90">${project.name}</h3>
                                 <p class="text-white/60 text-sm mb-5 leading-relaxed">${shortDesc}</p>
-                                <a href="${project.page}" class="text-sm font-medium text-white/80 hover:text-white transition-colors">View Details &rarr;</a>
+                                <a href="../projects/${project.page}#${project.id}" class="text-sm font-medium text-white/80 hover:text-white transition-colors">View Details &rarr;</a>
                             </div>
                         </div>
                     </div>
                 `;
             });
-            setupScrollAnimations();
+            
+            timelineContainer.innerHTML = timelineHTML;
+            setupAnimations();
         };
         
-        const setupScrollAnimations = () => {
+        const setupAnimations = () => {
             const timelineItems = document.querySelectorAll('.timeline-item');
+            
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('is-visible');
-                        const card = entry.target.querySelector('.timeline-card');
-                        // Add parallax effect
-                        window.addEventListener('scroll', () => {
-                            const rect = entry.target.getBoundingClientRect();
-                            const scrollY = window.innerHeight - rect.top;
-                            const parallaxOffset = (scrollY / window.innerHeight - 0.5) * -20;
-                             if(card) card.style.transform = `translateY(${parallaxOffset}px)`;
-                        });
                     }
                 });
-            }, { threshold: 0.2, rootMargin: "0px 0px -50px 0px" });
+            }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
 
             timelineItems.forEach(item => observer.observe(item));
+
+            const handleScroll = () => {
+                timelineItems.forEach(item => {
+                    if (item.classList.contains('is-visible')) {
+                        const rect = item.getBoundingClientRect();
+                        const card = item.querySelector('.timeline-card');
+                        const parallaxOffset = (rect.top / window.innerHeight) * 20;
+                        const clampedOffset = Math.max(-20, Math.min(20, parallaxOffset));
+                        
+                        if(card) {
+                            card.style.setProperty('--parallax-y', `${-clampedOffset}px`);
+                        }
+                    }
+                });
+            };
+            window.addEventListener('scroll', handleScroll, { passive: true });
         };
 
         fetchAllProjects().then(renderTimeline);
+        
+        document.querySelector('footer a[href="#"]').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     });
   </script>
 </body>
