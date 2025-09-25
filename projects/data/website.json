@@ -30,7 +30,7 @@
     "name": "MyAgriBot",
     "completion_date": "",
     "description": "Your Farming Assistant in Your Pocket. MyAgriBot provides real-time agricultural information, weather forecasts, and market prices right in your Telegram app. Get instant access to farming knowledge whenever you need it!",
-    "cover_image": "https://via.placeholder.com/600x400/4b5563/FFFFFF.png?text=MyAgriBot",
+    "cover_image": "https://santhoshsharuk.me/projects/images/agribot.png",
     "tags": ["Telegram Bot", "Agriculture", "Python", "AI"],
     "live_link": "https://santhoshsharuk.me/My_Agri_Telegram_bot/",
     "code_link": "https://github.com/santhoshsharuk/My_Agri_Telegram_bot"
