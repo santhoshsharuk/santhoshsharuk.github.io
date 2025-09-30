@@ -25,5 +25,14 @@
     "live_link": "#",
     "code_link": "#",
     "live_link_text": "Live Demo"
+  },
+  {
+    "name": "Free Invoice Generator",
+    "description": "A lightweight web app to create, preview, and download professional invoices quickly — ideal for freelancers and small businesses.",
+    "cover_image": "https://santhoshsharuk.me/projects/images/invoicegen.png",
+    "tags": ["React", "Next.js", "Tailwind CSS"],
+    "live_link": "https://santhoshsharuk.me/invoice-generator/",
+    "code_link": "#",
+    "live_link_text": "Open Invoice Generator"
   }
 ]
