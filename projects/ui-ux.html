@@ -218,14 +218,19 @@
               const tagsHtml = project.tags.map(tag => `<span class="text-xs glass px-2 py-1 rounded-full">${tag}</span>`).join('');
               
               const linksHtml = project.links.map(link => 
-                `<a href="${link.url}" class="text-sm font-medium hover:text-gradient transition-colors">${link.text}</a>`
+                `<a href="${link.url}" target="_blank" rel="noopener noreferrer" class="text-sm font-medium hover:text-gradient transition-colors">${link.text}</a>`
               ).join('');
+
+              // Determine the primary link for the image (first link in the links array)
+              const imageLink = project.links && project.links.length > 0 ? project.links[0].url : '#';
+              const hasLink = project.links && project.links.length > 0;
 
               const projectCardHtml = `
                 <div class="project-card glass rounded-2xl overflow-hidden backdrop-blur-lg flex flex-col">
-                  <div class="aspect-video bg-black/30">
-                    <img src="${project.cover_image}" alt="${project.title}" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
-                  </div>
+                  <a href="${imageLink}" target="_blank" rel="noopener noreferrer" class="aspect-video bg-black/30 relative overflow-hidden group block ${hasLink ? 'cursor-pointer' : 'cursor-default'}" ${!hasLink ? 'onclick="return false;"' : ''}>
+                    <img src="${project.cover_image}" alt="${project.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    ${hasLink ? '<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"><span class="text-white text-lg font-semibold flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg> View Project</span></div>' : ''}
+                  </a>
                   <div class="p-6 flex flex-col flex-grow">
                     <h3 class="font-display text-2xl font-semibold mb-2">${project.title}</h3>
                     <p class="text-white/60 text-sm mb-4">Role: ${project.role}</p>
