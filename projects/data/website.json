@@ -124,5 +124,14 @@
     "tags": ["AI", "Voice Command", "Offline", "Automation", "Security"],
     "live_link": "https://santhoshsharuk.me/voxcmd/",
     "code_link": "https://github.com/santhoshsharuk/voxcmd"
+  },
+  {
+    "name": "Photography Portfolio Website",
+    "completion_date": "",
+    "description": "A stunning photography portfolio website showcasing the best works.",
+    "cover_image": "https://santhoshsharuk.me/projects/images/photography_portfolio.png",
+    "tags": ["Photography", "Portfolio", "Web Development"],
+    "live_link": "https://santhoshsharuk.me/photography_website_template/Template1/index.html",
+    "code_link": ""
   }
 ]
