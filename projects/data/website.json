@@ -1,5 +1,14 @@
 [
   {
+   "name": "Next X Startup Company Website",
+   "completion_date": "2026-01-01",
+   "description": "This project focuses on building the official website for Next X Startup Company, showcasing its vision, products, services, and innovation-driven solutions. The platform is designed with a modern UI/UX, high performance, and scalable architecture to represent a strong digital presence.",
+   "cover_image": "https://santhoshsharuk.me/projects/images/nextxstartup.png",
+   "tags": ["Startup", "Web Development", "React", "Node.js", "UI/UX"],
+   "live_link": "https://santhoshsharuk.me/nextxstartup/",
+   "code_link": "https://github.com/santhoshsharuk/next-x-startup-website"
+  },
+  {
     "name": "Podcast AI Model",
     "completion_date": "2025-05-15",
     "description": "This project allows anyone to generate, process, and publish podcasts automatically with the help of AI models (speech synthesis, transcription, and enhancement).",
