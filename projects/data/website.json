@@ -42,6 +42,22 @@
   "live_link": "https://santhoshsharuk.me/med_web_2/",
   "code_link": "https://santhoshsharuk.me/med_web_2/" 
 },
+{
+  "name": "Sweet Delights Cake Shop Website",
+  "completion_date": "2026-03-15",
+  "description": "This project focuses on building the official website for Sweet Delights Cake Shop, a premium bakery brand offering custom-designed cakes, celebration specials, and freshly baked desserts. The website highlights signature collections, themed cakes, online ordering, and a smooth customer journey. Designed with a modern UI/UX approach, fast-loading performance, and mobile-first optimization, the platform enhances brand visibility and maximizes customer engagement and conversions.",
+  "cover_image": "https://santhoshsharuk.me/projects/images/cake_shop_web.png",
+  "tags": ["Cake Shop", "Bakery", "Custom Cakes", "E-commerce", "React", "Node.js", "UI/UX"],
+  "live_link": "https://santhoshsharuk.me/cake_website1/"
+},
+{
+  "name": "D & C Cakes Website",
+  "completion_date": "2026-03-01",
+  "description": "This project focuses on building the official website for D & C Cakes, a premium custom cake shop specializing in freshly baked, made-to-order celebration cakes. The platform showcases signature designs, live cake-in-60-minutes service, custom order system, and seamless user experience. Designed with modern UI/UX principles, high performance, and mobile-first optimization, the website strengthens the brand’s digital presence and improves customer conversions.",
+  "cover_image": "https://santhoshsharuk.me/projects/images/dandccakes.png",
+  "tags": ["Cake Shop", "Bakery", "E-commerce", "Custom Orders", "React", "Node.js", "UI/UX"],
+  "live_link": "https://clinet-d-c-cake-ngl.pages.dev/"
+},
   {
     "name": "Podcast AI Model",
     "completion_date": "2025-05-15",
