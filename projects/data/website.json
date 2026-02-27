@@ -8,6 +8,24 @@
    "live_link": "https://santhoshsharuk.me/nextxstartup/",
    "code_link": "https://github.com/santhoshsharuk/next-x-startup-website"
   },
+   {
+  "name": "HealthUp Medical Website",
+  "completion_date": "2026-08-01",
+  "description": "HealthUp Medical is a modern healthcare website designed to provide seamless appointment booking, doctor discovery, health service information, and patient engagement. The platform features a clean medical UI design, secure contact forms, service management, and responsive performance optimized for all devices.",
+  "cover_image": "https://santhoshsharuk.me/projects/images/healthup-medical.png",
+  "tags": ["Healthcare", "Medical Website", "Appointment System", "React", "Node.js", "Responsive Design"],
+  "live_link": "https://santhoshsharuk.me/med_web_3/"
+  
+  },
+  {
+  "name": "HealthUp Clinic Website",
+  "completion_date": "2026-01-01",
+  "description": "HealthUp Clinic Website is a professionally designed medical & clinic website built with a modern healthcare UI template. It features responsive layouts, service & department pages, doctor profiles, testimonials, appointment booking sections, and essential patient information designed to build trust and make health services easily accessible online. This project was developed to help clinics showcase departments, services, and specialists while offering a user-friendly experience for patients.",
+  "cover_image": "https://santhoshsharuk.me/projects/images/clinic-home.png",
+  "tags": ["Healthcare", "Clinic Website", "Responsive Design", "Bootstrap", "Medical UI"],
+  "live_link": "https://santhoshsharuk.me/med_web_2/",
+  "code_link": "https://santhoshsharuk.me/med_web_2/" 
+},
   {
     "name": "Podcast AI Model",
     "completion_date": "2025-05-15",
@@ -26,6 +44,8 @@
     "live_link": "https://santhoshsharuk.me/projects/images/aiweather.png",
     "code_link": "https://github.com/santhoshsharuk/-AI-Weather-Station-MVP-"
   },
+ 
+
   {
     "name": "NarratoAI (Hearify)",
     "completion_date": "2025-08-20",
