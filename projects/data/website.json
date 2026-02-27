@@ -1,4 +1,13 @@
-[{
+[
+  {
+  "name": "SheetKadai Website",
+  "completion_date": "2026-06-20",
+  "description": "This project focuses on building the official website for SheetKadai, providing users with an easy-to-use platform to access and manage sheet-based tools and services. The website is designed with a clean UI, fast performance, and a simple user-friendly experience.",
+  "cover_image": "https://santhoshsharuk.me/projects/images/sheetkadai.png",
+  "tags": ["Web Application", "Tools Platform", "Startup", "React", "Node.js"],
+  "live_link": "https://sheetkadai.tech/"
+},
+  {
   "name": "RootSoftSolution Company Website",
   "completion_date": "2026-06-01",
   "description": "This project focuses on building the official corporate website for RootSoftSolution, a technology-driven company delivering innovative software solutions and digital transformation services. The platform highlights company vision, services, case studies, technology expertise, and client engagement workflows. Designed with a professional UI/UX, high performance optimization, and scalable architecture, the website establishes a strong digital identity and enhances business credibility.",
