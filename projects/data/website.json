@@ -49,6 +49,14 @@
    
   },
   {
+  "name": "Agent Service Website",
+  "completion_date": "2026-08-05",
+  "description": "This project focuses on building a professional website for an Agent Service platform, showcasing services, client support, and contact management. The website highlights service details, inquiry forms, and easy communication options. Designed with a clean UI, fast performance, and a user-friendly layout, the platform helps agents build trust and connect efficiently with clients.",
+  "cover_image": "https://santhoshsharuk.me/projects/images/agent.png",
+  "tags": ["Service Website", "Agent Platform", "Business Website", "Web Development", "React", "Node.js"],
+  "live_link": "https://z-agent-2ql.pages.dev/"
+},
+  {
   "name": "Kanaku POS Website",
   "completion_date": "2026-07-20",
   "description": "This project focuses on building the official website for Kanaku POS, a simple and efficient point-of-sale system designed for retail shops and small businesses. The platform highlights billing features, sales tracking, inventory management, and easy-to-use dashboard tools. The website is designed with a clean UI, fast performance, and a user-friendly experience to support business growth.",
