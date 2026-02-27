@@ -1,5 +1,13 @@
 [
   {
+  "name": "Tie & Style E-commerce Website",
+  "completion_date": "2026-05-10",
+  "description": "This project focuses on building a modern fashion e-commerce website for Tie & Style, a brand specializing in premium men's accessories including ties, bow ties, pocket squares, and formal styling essentials. The platform features product catalogs, advanced filtering, secure checkout, user authentication, and an admin dashboard for inventory management. Designed with a sleek UI/UX, high performance optimization, and scalable backend architecture, the website enhances online shopping experience and brand identity.",
+  "cover_image": "https://santhoshsharuk.me/projects/images/tieandstyle.png",
+  "tags": ["E-commerce", "Fashion", "Men's Accessories", "Online Store", "React", "Node.js", "UI/UX"],
+  "live_link": "https://tie-style.com/"
+},
+  {
   "name": "Digital Store Web Application",
   "completion_date": "2026-04-20",
   "description": "This project focuses on building a scalable Digital Store Web Application that enables businesses and creators to sell digital products such as e-books, templates, software, courses, and downloadable assets. The platform includes secure file delivery, order management, payment integration, user authentication, and an admin dashboard for product control. Designed with a modern UI/UX, high performance architecture, and mobile-first optimization, the system ensures a seamless purchasing experience and strong digital brand presence.",
