@@ -1,4 +1,11 @@
-[
+[{
+  "name": "RootSoftSolution Company Website",
+  "completion_date": "2026-06-01",
+  "description": "This project focuses on building the official corporate website for RootSoftSolution, a technology-driven company delivering innovative software solutions and digital transformation services. The platform highlights company vision, services, case studies, technology expertise, and client engagement workflows. Designed with a professional UI/UX, high performance optimization, and scalable architecture, the website establishes a strong digital identity and enhances business credibility.",
+  "cover_image": "https://santhoshsharuk.me/projects/images/rootsoftsolution.png",
+  "tags": ["Company Website", "Corporate", "Software Solutions", "Web Development", "React", "Node.js", "UI/UX"],
+  "live_link": "https://rootsoftsolution.pages.dev/"
+},
   {
   "name": "Tie & Style E-commerce Website",
   "completion_date": "2026-05-10",
