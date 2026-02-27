@@ -1,5 +1,13 @@
 [
   {
+  "name": "BrightSmile Dental Clinic Website",
+  "completion_date": "2026-07-05",
+  "description": "This project focuses on building the official website for BrightSmile Dental Clinic, providing information about dental treatments, doctor profiles, appointment booking, and patient care services. The website is designed with a clean and professional UI, fast performance, and a user-friendly experience to build trust and improve patient engagement.",
+  "cover_image": "https://santhoshsharuk.me/projects/images/dentalclinic.png",
+  "tags": ["Healthcare", "Dental Clinic", "Appointment Booking", "Web Development", "React", "Node.js"],
+  "live_link": "https://santhoshsharuk.me/dentalclinic/"
+},
+  {
   "name": "SheetKadai Website",
   "completion_date": "2026-06-20",
   "description": "This project focuses on building the official website for SheetKadai, providing users with an easy-to-use platform to access and manage sheet-based tools and services. The website is designed with a clean UI, fast performance, and a simple user-friendly experience.",
