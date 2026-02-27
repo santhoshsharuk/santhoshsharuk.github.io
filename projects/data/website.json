@@ -5,9 +5,17 @@
    "description": "This project focuses on building the official website for Next X Startup Company, showcasing its vision, products, services, and innovation-driven solutions. The platform is designed with a modern UI/UX, high performance, and scalable architecture to represent a strong digital presence.",
    "cover_image": "https://santhoshsharuk.me/projects/images/nextxstartup.png",
    "tags": ["Startup", "Web Development", "React", "Node.js", "UI/UX"],
-   "live_link": "https://santhoshsharuk.me/nextxstartup/",
-   "code_link": "https://github.com/santhoshsharuk/next-x-startup-website"
+   "live_link": "https://santhoshsharuk.me/nextxstartup/"
+   
   },
+  {
+  "name": "Cuddles & Capture Photo Studio Website",
+  "completion_date": "2026-01-01",
+  "description": "This project focuses on building the official website for Cuddles & Capture Photo Studio, showcasing its photography services, creative portfolios, client galleries, and studio experience. The platform is designed with a modern UI/UX, fast performance, and scalable architecture to establish a strong and premium digital presence for the brand.",
+  "cover_image": "https://santhoshsharuk.me/projects/images/cuddlescapture.png",
+  "tags": ["Photography", "Photo Studio", "Web Development", "React", "Node.js", "UI/UX"],
+  "live_link": "https://cuddlesncaptures-photo-studio.pages.dev/"
+},
    {
   "name": "HealthUp Medical Website",
   "completion_date": "2026-08-01",
