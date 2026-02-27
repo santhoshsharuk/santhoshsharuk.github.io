@@ -1,5 +1,13 @@
 [
   {
+  "name": "Digital Store Web Application",
+  "completion_date": "2026-04-20",
+  "description": "This project focuses on building a scalable Digital Store Web Application that enables businesses and creators to sell digital products such as e-books, templates, software, courses, and downloadable assets. The platform includes secure file delivery, order management, payment integration, user authentication, and an admin dashboard for product control. Designed with a modern UI/UX, high performance architecture, and mobile-first optimization, the system ensures a seamless purchasing experience and strong digital brand presence.",
+  "cover_image": "https://santhoshsharuk.me/projects/images/digitalstore.png",
+  "tags": ["Digital Store", "E-commerce", "SaaS", "Web Application", "React", "Node.js", "Digital Products"],
+  "live_link": "https://store.santhoshsharuk.me/"
+},
+  {
    "name": "Next X Startup Company Website",
    "completion_date": "2026-01-01",
    "description": "This project focuses on building the official website for Next X Startup Company, showcasing its vision, products, services, and innovation-driven solutions. The platform is designed with a modern UI/UX, high performance, and scalable architecture to represent a strong digital presence.",
@@ -41,6 +49,14 @@
   "tags": ["Healthcare", "Clinic Website", "Responsive Design", "Bootstrap", "Medical UI"],
   "live_link": "https://santhoshsharuk.me/med_web_2/",
   "code_link": "https://santhoshsharuk.me/med_web_2/" 
+},
+{
+  "name": "Free Invoice Web Application",
+  "completion_date": "2026-04-01",
+  "description": "This project focuses on building a Free Invoice Web Application designed for freelancers, small businesses, and startups to easily create, manage, and download professional invoices. The platform includes features like client management, automated invoice generation, tax calculation, PDF export, and payment tracking. Built with a clean and intuitive UI/UX, high performance architecture, and scalable backend system, the application simplifies billing workflows and improves financial organization.",
+  "cover_image": "https://santhoshsharuk.me/projects/images/freeinvoice.png",
+  "tags": ["Invoice System", "SaaS", "FinTech", "Web Application", "React", "Node.js", "PDF Generation"],
+  "live_link": "https://santhoshsharuk.me/invoice-generator/"
 },
 {
   "name": "Sweet Delights Cake Shop Website",
