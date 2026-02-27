@@ -9,6 +9,14 @@
    
   },
   {
+  "name": "PhotoSelection Studio Website",
+  "completion_date": "2026-02-15",
+  "description": "This project focuses on building the official website for PhotoSelection Studio, a modern photography and image selection platform designed to streamline client photo selection and gallery management. The website showcases studio services, categorized portfolios, secure client galleries, and an intuitive photo selection system. Built with a clean UI/UX, high performance, and scalable architecture, the platform enhances both client experience and studio workflow efficiency.",
+  "cover_image": "https://santhoshsharuk.me/projects/images/photoselectionstudio.png",
+  "tags": ["Photography", "Photo Selection", "Client Gallery", "Web Development", "React", "Node.js", "UI/UX"],
+  "live_link": "https://santhoshsharuk.me/photoselectionstudio/"
+},
+  {
   "name": "Cuddles & Capture Photo Studio Website",
   "completion_date": "2026-01-01",
   "description": "This project focuses on building the official website for Cuddles & Capture Photo Studio, showcasing its photography services, creative portfolios, client galleries, and studio experience. The platform is designed with a modern UI/UX, fast performance, and scalable architecture to establish a strong and premium digital presence for the brand.",
