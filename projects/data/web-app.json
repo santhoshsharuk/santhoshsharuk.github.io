@@ -2,16 +2,25 @@
   {
     "name": "Project Management Dashboard",
     "description": "A SaaS platform for teams to manage tasks, track progress with Kanban boards, and collaborate in real-time.",
-    "cover_image": "https://via.placeholder.com/600x400/111827/FFFFFF.png?text=Dashboard+UI+Screenshot",
+    "cover_image": "https://santhoshsharuk.me/projects/images/pm.png",
     "tags": ["React", "Node.js", "Socket.IO", "PostgreSQL"],
-    "live_link": "#",
+    "live_link": "https://youtu.be/nGlwG62cZmE?si=bwWFLCJ9__ckszJC",
     "code_link": "#",
-    "live_link_text": "Live Demo"
+    "live_link_text": "Live Demo in Youtube"
   },
+  {
+  "name": "ZSlate – Live Canvas Whiteboard",
+  "description": "A web-based collaborative canvas whiteboard that allows users to draw, sketch ideas, and brainstorm in real-time. Built for teams, creators, and developers to visually plan projects directly in the browser.",
+  "cover_image": "https://via.placeholder.com/600x400/0F172A/FFFFFF.png?text=ZSlate+Canvas+Whiteboard",
+  "tags": ["HTML", "CSS", "JavaScript", "Canvas API"],
+  "live_link": "https://zslate.pages.dev/",
+  "code_link": "",
+  "live_link_text": "Open ZSlate Live"
+},
   {
     "name": "AI Content Generation Tool",
     "description": "A web app that leverages the OpenAI API to help users generate marketing copy, blog posts, and other creative text.",
-    "cover_image": "https://via.placeholder.com/600x400/1f2937/FFFFFF.png?text=AI+Tool+Screenshot",
+    "cover_image": "https://santhoshsharuk.me/projects/images/ai-content-generator.png",
     "tags": ["Vue.js", "Python", "Flask", "OpenAI API"],
     "live_link": "#",
     "code_link": "none",
