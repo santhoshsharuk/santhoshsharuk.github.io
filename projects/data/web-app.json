@@ -11,7 +11,7 @@
   {
   "name": "ZSlate – Live Canvas Whiteboard",
   "description": "A web-based collaborative canvas whiteboard that allows users to draw, sketch ideas, and brainstorm in real-time. Built for teams, creators, and developers to visually plan projects directly in the browser.",
-  "cover_image": "https://via.placeholder.com/600x400/0F172A/FFFFFF.png?text=ZSlate+Canvas+Whiteboard",
+  "cover_image": "https://santhoshsharuk.me/projects/images/zslate.png",
   "tags": ["HTML", "CSS", "JavaScript", "Canvas API"],
   "live_link": "https://zslate.pages.dev/",
   "code_link": "",
