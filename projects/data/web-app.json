@@ -5,7 +5,6 @@
     "cover_image": "https://santhoshsharuk.me/projects/images/pm.png",
     "tags": ["React", "Node.js", "Socket.IO", "PostgreSQL"],
     "live_link": "https://youtu.be/nGlwG62cZmE?si=bwWFLCJ9__ckszJC",
-    "code_link": "#",
     "live_link_text": "Live Demo in Youtube"
   },
   {
@@ -14,7 +13,6 @@
   "cover_image": "https://santhoshsharuk.me/projects/images/zslate.png",
   "tags": ["HTML", "CSS", "JavaScript", "Canvas API"],
   "live_link": "https://zslate.pages.dev/",
-  "code_link": "",
   "live_link_text": "Open ZSlate Live"
 },
   {
@@ -23,17 +21,16 @@
     "cover_image": "https://santhoshsharuk.me/projects/images/ai-content-generator.png",
     "tags": ["Vue.js", "Python", "Flask", "OpenAI API"],
     "live_link": "#",
-    "code_link": "none",
     "live_link_text": "Try The Tool"
   },
   {
     "name": "CRM System",
     "description": "A full-featured CRM for small businesses to manage leads, customers, and sales pipelines with secure authentication.",
-    "cover_image": "https://via.placeholder.com/600x400/374151/FFFFFF.png?text=CRM+Screenshot",
+    "cover_image": "https://santhoshsharuk.me/projects/images/crm.png",
     "tags": ["Django", "Tailwind CSS", "REST API"],
-    "live_link": "#",
-    "code_link": "#",
-    "live_link_text": "Live Demo"
+    "live_link": "https://crm.santhoshsharuk.me/",
+
+    "live_link_text": "Live Link"
   },
   {
     "name": "Free Invoice Generator",
