@@ -1,5 +1,13 @@
 [
   {
+  "name": "BharatFit Gym Website",
+  "completion_date": "2026-07-05",
+  "description": "This project focuses on building the official website for BharatFit Gym, providing information about fitness programs, professional coaches, membership pricing, and training schedules. The website is designed with a modern fitness-themed UI, fast performance, and an engaging user experience to motivate users and promote a healthy lifestyle.",
+  "cover_image": "https://santhoshsharuk.me/projects/images/gym01.png",
+  "tags": ["Fitness", "Gym Website", "Training Programs", "Web Development", "React", "Node.js"],
+  "live_link": "https://santhoshsharuk.me/gym01/"
+},
+  {
   "name": "BrightSmile Dental Clinic Website",
   "completion_date": "2026-07-05",
   "description": "This project focuses on building the official website for BrightSmile Dental Clinic, providing information about dental treatments, doctor profiles, appointment booking, and patient care services. The website is designed with a clean and professional UI, fast performance, and a user-friendly experience to build trust and improve patient engagement.",
