@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-force-motion="true">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Santhosh Sharuk | Portfolio</title>
   <link rel="manifest" href="/manifest.json">
-  <meta name="description" content="Santhosh Sharuk – A developer who blends AI and creativity to turn bold ideas into real solutions. Always learning, always building.">
+  <meta name="description" content="Santhosh Sharuk is a founder and entrepreneur building AI-driven products and web experiences. Founder of Nex-X Spark.">
   <!-- Mobile Branding -->
   <meta name="apple-mobile-web-app-title" content="Santhosh Sharuk">
   <meta name="application-name" content="Santhosh Sharuk">
   <meta name="theme-color" content="#000000">
-  <meta name="keywords" content="Santhosh Sharuk, AI Developer, Portfolio, Entrepreneur, AI Projects, Web Development">
+  <meta name="keywords" content="Santhosh Sharuk, Founder, Entrepreneur, Nex-X Spark, AI, SaaS, Product Builder, Web Development">
   <meta name="author" content="Santhosh Sharuk">
-  <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/projects/images/nexx/nexx.png" type="image/png">
+  <link rel="shortcut icon" href="/projects/images/nexx/nexx.png" type="image/png">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -22,7 +22,7 @@
       "alternateName": "Sharuk",
       "image": "https://santhoshsharuk.me/image/santhosh-sharuk.jpg",
       "url": "https://santhoshsharuk.me",
-      "jobTitle": "AI Engineer & Entrepreneur",
+      "jobTitle": "Founder & Entrepreneur",
       "worksFor": [
         {
           "@type": "Organization",
@@ -48,24 +48,24 @@
       ],
       "knowsAbout": [
         "Artificial Intelligence",
-        "Machine Learning",
         "Entrepreneurship",
         "SaaS Products",
+        "Product Strategy",
         "Web Development",
         "Automation Tools"
       ],
-      "description": "Santhosh Sharuk is Developer and AI explorer shaping ideas into technology that matters. Santhosh Sharuk is a lifelong learner driven to create change."
+      "description": "Santhosh Sharuk is a founder and entrepreneur building AI-driven products and web experiences. Founder of Nex-X Spark."
     }
   </script>
    <!-- favicon-->
   <!-- Standard favicon -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" href="/projects/images/nexx/nexx.png">
 
   <!-- For PNG version -->
-  <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/projects/images/nexx/nexx.png" sizes="32x32">
 
   <!-- For Apple devices -->
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="/projects/images/nexx/nexx.png">
 
   <!-- For Android/Chrome -->
   <link rel="manifest" href="/site.webmanifest">
@@ -217,6 +217,49 @@
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
+    }
+
+    .frame-reveal {
+      position: relative;
+      opacity: 0;
+      transform: translateY(24px) scale(0.985);
+      filter: blur(2px);
+      transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
+    }
+
+    .frame-reveal::after {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      opacity: 0;
+      transform: scale(0.985);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      pointer-events: none;
+    }
+
+    .frame-reveal > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .frame-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+
+    .frame-reveal.is-visible::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .frame-reveal,
+      .frame-reveal::after {
+        transition: none;
+      }
     }
     
     /* Letter spacing */
@@ -441,8 +484,10 @@
   <header class="fixed top-0 left-0 w-full z-50 px-4 py-4">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
       <!-- Logo -->
-      <a href="#" class="text-xl font-display font-medium tracking-wider">
-        <span class="text-gradient">Santhosh.dev</span>
+      <a href="#" class="text-xl font-display font-medium tracking-wider inline-flex items-center gap-3">
+        <img src="/projects/images/nexx/nexx.png" alt="Nexx logo" class="h-7 w-7 object-contain" />
+        <span class="text-gradient">Santhosh Sharuk</span>
+        <span class="text-white/60 text-sm uppercase tracking-wider">Founder of Nex-X</span>
       </a>
       
       <!-- Desktop Navigation -->
@@ -537,8 +582,7 @@
     
     <!-- Right side - Text -->
     <div class="w-full md:w-1/2 text-center md:text-left relative z-10">
-      
-      
+
       <h1 class="font-display text-4xl sm:text-5xl md:text-7xl xl:text-8xl font-bold mb-6 leading-none">
         <span class="block opacity-0 animate-reveal" style="animation-delay: 0.3s;">If you want to</span>
         <span class="block opacity-0 animate-reveal" style="animation-delay: 0.6s;">create something,</span>
@@ -589,21 +633,21 @@
     <div class="max-w-7xl mx-auto relative z-10">
       <h2 class="font-display text-3xl sm:text-4xl md:text-7xl font-semibold text-center md:text-left mb-12 md:mb-20 leading-none">
         <span class="block mb-2 md:mb-4">About Me</span>
-        <span class="text-gradient">Developer & Builder</span>
+        <span class="text-gradient">Founder & Entrepreneur</span>
       </h2>
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
         <div class="order-2 md:order-1">
           <p class="text-lg sm:text-xl md:text-2xl leading-relaxed mb-8 md:mb-10 opacity-90">
-            I'm not just a developer, I'm a <span class="text-white font-medium">builder</span>.
+            I am a <span class="text-white font-medium">founder</span> and <span class="text-white font-medium">entrepreneur</span> focused on building simple, useful products that solve real problems.
           </p>
           
           <p class="text-lg sm:text-xl md:text-2xl leading-relaxed mb-8 md:mb-10 opacity-90">
-            With experience in <span class="text-white font-medium">web</span>, <span class="text-white font-medium">mobile</span>, <span class="text-white font-medium">design</span>, <span class="text-white font-medium">AI</span>, and <span class="text-white font-medium">IoT</span>, I focus on bringing ideas to life — <span class="text-white font-medium">fast</span>, <span class="text-white font-medium">simple</span>, and <span class="text-white font-medium">powerful</span>.
+            I work across <span class="text-white font-medium">AI</span>, <span class="text-white font-medium">web</span>, <span class="text-white font-medium">product design</span>, and <span class="text-white font-medium">systems</span>, moving fast from idea to launch with clarity and care.
           </p>
           
           <p class="text-lg sm:text-xl md:text-2xl font-script text-white mb-8 md:mb-10">
-            My vision is to keep pushing boundaries and create digital solutions that inspire.
+            Founder of Nex-X Spark, building with a remote team and a long-term vision.
           </p>
           
           <!-- CTA -->
@@ -680,7 +724,6 @@
     
     <!-- Category Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
-      
       <!-- Category Card: Websites -->
       <a href="projects/websites.html" class="group glass rounded-2xl p-6 flex flex-col items-start hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-2">
         <div class="w-12 h-12 glass rounded-lg flex items-center justify-center mb-4">
@@ -721,8 +764,7 @@
         <span class="text-sm font-medium group-hover:text-white transition-colors">View Projects &rarr;</span>
       </a>
 
-      <!-- Add more category cards here by copying the structure above -->
-      <!-- Example for SaaS -->
+      <!-- Category Card: SaaS -->
       <a href="projects/saas.html" class="group glass rounded-2xl p-6 flex flex-col items-start hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-2">
         <div class="w-12 h-12 glass rounded-lg flex items-center justify-center mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>
@@ -732,8 +774,8 @@
         <span class="text-sm font-medium group-hover:text-white transition-colors">View Projects &rarr;</span>
       </a>
 
-      <!-- Example for UI/UX -->
-       <a href="projects/ui-ux.html" class="group glass rounded-2xl p-6 flex flex-col items-start hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-2">
+      <!-- Category Card: UI/UX -->
+      <a href="projects/ui-ux.html" class="group glass rounded-2xl p-6 flex flex-col items-start hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-2">
         <div class="w-12 h-12 glass rounded-lg flex items-center justify-center mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>
         </div>
@@ -741,9 +783,6 @@
         <p class="text-white/60 text-sm flex-grow mb-4">User-centric design and prototypes.</p>
         <span class="text-sm font-medium group-hover:text-white transition-colors">View Projects &rarr;</span>
       </a>
-      
-      <!-- You can continue adding cards for IoT, Blender, etc. -->
-
     </div>
   </div>
 </section>
@@ -1143,121 +1182,14 @@
 <!-- End of Interactive Timeline CTA Section -->
 
 
-  <!-- Work Gallery -->
-  <section id="works" class="relative py-16 md:py-40 px-4 md:px-16">
+  <!-- Journey Gallery -->
+  <section id="works-showcase" class="relative py-16 md:py-40 px-4 md:px-16">
     <!-- Background gradient -->
     <div class="absolute inset-0 bg-gradient-to-b from-black via-blue-950/10 to-black"></div>
     
     <div class="max-w-7xl mx-auto relative z-10">
-      <h2 class="font-display text-3xl sm:text-5xl md:text-7xl font-semibold text-center mb-10 md:mb-28 leading-none">
-        <span class="text-outline-sm">My</span> <span class="text-gradient">Works</span>
-      </h2>
       
-      <!-- Masonry Gallery with glassmorphism cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-        <!-- Gallery Item 1 - Large -->
-        <div class="sm:col-span-2 project-card glass rounded-xl md:rounded-3xl overflow-hidden backdrop-blur-lg">
-          <div class="aspect-video relative overflow-hidden">
-            <img src="/image/placeholder-800x400.svg" alt="Project 1" class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-50"></div>
-            <div class="absolute bottom-0 left-0 p-4 sm:p-6 md:p-8">
-              <h3 class="text-xl sm:text-2xl md:text-3xl font-display font-semibold mb-1 md:mb-2">Interactive Learning App</h3>
-              <p class="text-white/70 mb-3 md:mb-4 text-sm md:text-base">Complete educational platform with AR integration</p>
-              <a href="#" class="inline-flex items-center px-3 py-1.5 md:px-4 md:py-2 glass rounded-lg text-xs md:text-sm hover:glass-hover">
-                <span>View Project</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 md:h-4 md:w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Gallery Item 2 -->
-        <div class="project-card glass rounded-xl md:rounded-3xl overflow-hidden backdrop-blur-lg">
-          <div class="aspect-square relative overflow-hidden">
-            <img src="/image/placeholder-400x400.svg" alt="Project 2" class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-50"></div>
-            <div class="absolute bottom-0 left-0 p-4 sm:p-6">
-              <h3 class="text-lg md:text-xl font-display font-semibold mb-1 md:mb-2">VR Experience</h3>
-              <p class="text-white/70 mb-3 md:mb-4 text-xs md:text-sm">Immersive virtual reality showcase</p>
-              <a href="#" class="inline-flex items-center px-2 py-1 md:px-3 md:py-1.5 glass rounded-lg text-xs hover:glass-hover">
-                <span>Try Demo</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 md:h-4 md:w-4 ml-1 md:ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Gallery Item 3 -->
-        <div class="project-card glass rounded-xl md:rounded-3xl overflow-hidden backdrop-blur-lg">
-          <div class="aspect-square relative overflow-hidden">
-            <img src="/image/placeholder-400x400.svg" alt="Project 3" class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-50"></div>
-            <div class="absolute bottom-0 left-0 p-4 sm:p-6">
-              <h3 class="text-lg md:text-xl font-display font-semibold mb-1 md:mb-2">AI Visualization</h3>
-              <p class="text-white/70 mb-3 md:mb-4 text-xs md:text-sm">Data-driven insights platform</p>
-              <a href="#" class="inline-flex items-center px-2 py-1 md:px-3 md:py-1.5 glass rounded-lg text-xs hover:glass-hover">
-                <span>View Project</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 md:h-4 md:w-4 ml-1 md:ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Gallery Item 4 -->
-        <div class="project-card glass rounded-xl md:rounded-3xl overflow-hidden backdrop-blur-lg">
-          <div class="aspect-square relative overflow-hidden">
-            <img src="/image/placeholder-400x400.svg" alt="Project 4" class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-50"></div>
-            <div class="absolute bottom-0 left-0 p-4 sm:p-6">
-              <h3 class="text-lg md:text-xl font-display font-semibold mb-1 md:mb-2">Mobile Interface</h3>
-              <p class="text-white/70 mb-3 md:mb-4 text-xs md:text-sm">Next-gen UX for smart devices</p>
-              <a href="#" class="inline-flex items-center px-2 py-1 md:px-3 md:py-1.5 glass rounded-lg text-xs hover:glass-hover">
-                <span>View Project</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 md:h-4 md:w-4 ml-1 md:ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Gallery Item 5 - Large -->
-        <div class="sm:col-span-2 project-card glass rounded-xl md:rounded-3xl overflow-hidden backdrop-blur-lg">
-          <div class="aspect-video relative overflow-hidden">
-            <img src="/image/placeholder-800x400.svg" alt="Project 5" class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-50"></div>
-            <div class="absolute bottom-0 left-0 p-4 sm:p-6 md:p-8">
-              <h3 class="text-xl sm:text-2xl md:text-3xl font-display font-semibold mb-1 md:mb-2">3D Product Showcase</h3>
-              <p class="text-white/70 mb-3 md:mb-4 text-sm md:text-base">Revolutionary way to present products in digital space</p>
-              <a href="#" class="inline-flex items-center px-3 py-1.5 md:px-4 md:py-2 glass rounded-lg text-xs md:text-sm hover:glass-hover">
-                <span>Watch Demo</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 md:h-4 md:w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Coming Soon Item -->
-        <div class="glass rounded-xl md:rounded-3xl overflow-hidden backdrop-blur-lg flex items-center justify-center p-6 md:p-10 aspect-square">
-          <div class="text-center">
-            <div class="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 md:mb-6 rounded-full border border-white/20 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4" />
-              </svg>
-            </div>
-            <h3 class="text-lg md:text-xl font-display font-medium mb-1 md:mb-2">More Coming Soon</h3>
-            <p class="text-white/50 text-xs md:text-sm">Stay tuned for future projects</p>
-          </div>
-        </div>
-      </div>
+      
     </div>
   </section>
 
@@ -1276,151 +1208,34 @@
     <div class="absolute inset-0 bg-gradient-to-b from-black via-indigo-950/10 to-black"></div>
     
     <div class="max-w-7xl mx-auto relative z-10">
-      <h2 class="font-display text-3xl sm:text-5xl md:text-7xl font-semibold text-center mb-10 md:mb-28 leading-none">
+      <h2 class="font-display text-3xl sm:text-5xl md:text-7xl font-semibold text-center mb-10 md:mb-20 leading-none">
         <span class="text-outline-sm">My</span> <span class="text-gradient">Journey</span>
       </h2>
       
-      <div class="timeline relative max-w-3xl mx-auto">
-        <!-- Center line -->
-        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-purple-500/50 via-blue-500/50 to-transparent"></div>
-        
-        <!-- Timeline items -->
-        <!-- 2021 -->
-        <div class="timeline-item mb-16 md:mb-24 relative flex">
-          <!-- Left content for desktop, centered for mobile -->
-          <div class="hidden md:block w-1/2 pr-12 text-right">
-            <div class="glass rounded-xl p-6 backdrop-blur-lg">
-              <h3 class="text-xl font-display font-semibold mb-2">Started Coding Journey</h3>
-              <p class="text-white/70">Began learning programming fundamentals and web development. Created my first projects using HTML, CSS, and JavaScript.</p>
-            </div>
-          </div>
-          
-          <!-- Center dot -->
-          <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-purple-500 z-10 flex items-center justify-center">
-            <div class="w-3 h-3 rounded-full bg-white"></div>
-          </div>
-          
-          <!-- Year label -->
-          <div class="absolute left-1/2 transform -translate-x-1/2 -mt-10 text-lg font-display font-medium">
-            2021
-          </div>
-          
-          <!-- Right content for desktop, hidden on mobile -->
-          <div class="md:hidden w-full pl-12">
-            <div class="glass rounded-xl p-6 backdrop-blur-lg">
-              <h3 class="text-xl font-display font-semibold mb-2">Started Coding Journey</h3>
-              <p class="text-white/70">Began learning programming fundamentals and web development. Created my first projects using HTML, CSS, and JavaScript.</p>
-            </div>
-          </div>
-          <div class="hidden md:block w-1/2"></div>
+      <div class="max-w-3xl mx-auto space-y-6 md:space-y-8">
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4 glass rounded-2xl p-5 md:p-6">
+          <div class="text-sm tracking-widest uppercase text-white/60">2020</div>
+          <p class="text-white/80">Started my entrepreneurship journey, learning how to turn problems into products.</p>
         </div>
-        
-        <!-- 2022 -->
-        <div class="timeline-item mb-16 md:mb-24 relative flex">
-          <!-- Left content for desktop -->
-          <div class="hidden md:block w-1/2"></div>
-          
-          <!-- Center dot -->
-          <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-blue-500 z-10 flex items-center justify-center">
-            <div class="w-3 h-3 rounded-full bg-white"></div>
-          </div>
-          
-          <!-- Year label -->
-          <div class="absolute left-1/2 transform -translate-x-1/2 -mt-10 text-lg font-display font-medium">
-            2022
-          </div>
-          
-          <!-- Right content -->
-          <div class="w-full md:w-1/2 pl-12">
-            <div class="glass rounded-xl p-6 backdrop-blur-lg">
-              <h3 class="text-xl font-display font-semibold mb-2">First Internship</h3>
-              <p class="text-white/70">Worked as a Web Development and AR intern, gaining practical experience with real-world projects and professional workflows.</p>
-            </div>
-          </div>
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4 glass rounded-2xl p-5 md:p-6">
+          <div class="text-sm tracking-widest uppercase text-white/60">2022</div>
+          <p class="text-white/80">Joined college and taught students through EdTech, growing through mentoring.</p>
         </div>
-        
-        <!-- 2023 -->
-        <div class="timeline-item mb-16 md:mb-24 relative flex">
-          <!-- Left content for desktop -->
-          <div class="hidden md:block w-1/2 pr-12 text-right">
-            <div class="glass rounded-xl p-6 backdrop-blur-lg">
-              <h3 class="text-xl font-display font-semibold mb-2">First Major Projects</h3>
-              <p class="text-white/70">Developed and launched significant projects, including a learning platform and mobile applications that gained traction in the community.</p>
-            </div>
-          </div>
-          
-          <!-- Center dot -->
-          <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-indigo-500 z-10 flex items-center justify-center">
-            <div class="w-3 h-3 rounded-full bg-white"></div>
-          </div>
-          
-          <!-- Year label -->
-          <div class="absolute left-1/2 transform -translate-x-1/2 -mt-10 text-lg font-display font-medium">
-            2023
-          </div>
-          
-          <!-- Right content -->
-          <div class="md:hidden w-full pl-12">
-            <div class="glass rounded-xl p-6 backdrop-blur-lg">
-              <h3 class="text-xl font-display font-semibold mb-2">First Major Projects</h3>
-              <p class="text-white/70">Developed and launched significant projects, including a learning platform and mobile applications that gained traction in the community.</p>
-            </div>
-          </div>
-          <div class="hidden md:block w-1/2"></div>
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4 glass rounded-2xl p-5 md:p-6">
+          <div class="text-sm tracking-widest uppercase text-white/60">2023</div>
+          <p class="text-white/80">Explored Blender, AR/VR, and 3D printing while sharpening web development.</p>
         </div>
-        
-        <!-- 2024 -->
-        <div class="timeline-item mb-16 md:mb-24 relative flex">
-          <!-- Left content for desktop -->
-          <div class="hidden md:block w-1/2"></div>
-          
-          <!-- Center dot -->
-          <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-pink-500 z-10 flex items-center justify-center">
-            <div class="w-3 h-3 rounded-full bg-white"></div>
-          </div>
-          
-          <!-- Year label -->
-          <div class="absolute left-1/2 transform -translate-x-1/2 -mt-10 text-lg font-display font-medium">
-            2024
-          </div>
-          
-          <!-- Right content -->
-          <div class="w-full md:w-1/2 pl-12">
-            <div class="glass rounded-xl p-6 backdrop-blur-lg">
-              <h3 class="text-xl font-display font-semibold mb-2">Expanded Skills</h3>
-              <p class="text-white/70">Broadened skillset to include artificial intelligence, advanced UI/UX design, and Flutter mobile development.</p>
-            </div>
-          </div>
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4 glass rounded-2xl p-5 md:p-6">
+          <div class="text-sm tracking-widest uppercase text-white/60">2024</div>
+          <p class="text-white/80">Shifted from static sites to simple web apps focused on clean MVPs.</p>
         </div>
-        
-        <!-- 2025 - Current -->
-        <div class="timeline-item relative flex">
-          <!-- Left content for desktop -->
-          <div class="hidden md:block w-1/2 pr-12 text-right">
-            <div class="glass rounded-xl p-6 backdrop-blur-lg">
-              <h3 class="text-xl font-display font-semibold mb-2">Current Projects</h3>
-              <p class="text-white/70">Working on innovative projects combining web technologies, mobile development, and emerging tech to create unique digital experiences.</p>
-            </div>
-          </div>
-          
-          <!-- Center dot -->
-          <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-green-500 z-10 flex items-center justify-center">
-            <div class="w-3 h-3 rounded-full bg-white"></div>
-          </div>
-          
-          <!-- Year label -->
-          <div class="absolute left-1/2 transform -translate-x-1/2 -mt-10 text-lg font-display font-medium">
-            2025
-          </div>
-          
-          <!-- Right content -->
-          <div class="md:hidden w-full pl-12">
-            <div class="glass rounded-xl p-6 backdrop-blur-lg">
-              <h3 class="text-xl font-display font-semibold mb-2">Current Projects</h3>
-              <p class="text-white/70">Working on innovative projects combining web technologies, mobile development, and emerging tech to create unique digital experiences.</p>
-            </div>
-          </div>
-          <div class="hidden md:block w-1/2"></div>
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4 glass rounded-2xl p-5 md:p-6">
+          <div class="text-sm tracking-widest uppercase text-white/60">2025</div>
+          <p class="text-white/80">Built AI full-stack projects, delivered client work, and learned from a micro-SaaS failure.</p>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4 glass rounded-2xl p-5 md:p-6">
+          <div class="text-sm tracking-widest uppercase text-white/60">2026</div>
+          <p class="text-white/80">Focused on systems and team-building, now building Nex-X Spark.</p>
         </div>
       </div>
     </div>
@@ -1745,7 +1560,10 @@
       <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
         <div class="mb-6 md:mb-0">
           <div class="text-center md:text-left">
-            <a href="#" class="text-xl font-display font-medium text-gradient">Santhosh Sharuk</a>
+            <a href="#" class="inline-flex items-center gap-3 text-xl font-display font-medium text-gradient">
+              <img src="/projects/images/nexx/nexx.png" alt="Nexx logo" class="h-7 w-7 object-contain" />
+              <span>Santhosh Sharuk</span>
+            </a>
           </div>
           <div class="text-white/50 text-sm mt-2 text-center md:text-left">
             © 2025 All rights reserved
@@ -1803,6 +1621,118 @@
   <!-- JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const forceMotion = document.documentElement.dataset.forceMotion === 'true';
+      const motionEnabled = forceMotion || !prefersReducedMotion;
+
+      const sectionFrames = document.querySelectorAll('section');
+      sectionFrames.forEach(section => section.classList.add('frame-reveal'));
+      if (sectionFrames[0]) {
+        sectionFrames[0].classList.add('is-visible');
+      }
+
+      const revealSection = (section) => {
+        if (!section.classList.contains('is-visible')) {
+          section.classList.add('is-visible');
+        }
+      };
+
+      if (motionEnabled && 'IntersectionObserver' in window) {
+        const frameObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              revealSection(entry.target);
+              frameObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.18, rootMargin: '0px 0px -10% 0px' });
+
+        sectionFrames.forEach(section => frameObserver.observe(section));
+      } else if (motionEnabled) {
+        const checkVisibility = () => {
+          const triggerPoint = window.innerHeight * 0.85;
+          sectionFrames.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= triggerPoint) {
+              revealSection(section);
+            }
+          });
+        };
+        checkVisibility();
+        window.addEventListener('scroll', checkVisibility, { passive: true });
+      } else {
+        sectionFrames.forEach(section => revealSection(section));
+      }
+
+      if (motionEnabled) {
+        let currentScroll = window.scrollY || window.pageYOffset;
+        let targetScroll = currentScroll;
+        let isTicking = false;
+
+        const clampScroll = (value) => {
+          const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+          return Math.max(0, Math.min(value, maxScroll));
+        };
+
+        const updateScroll = () => {
+          currentScroll += (targetScroll - currentScroll) * 0.08;
+          if (Math.abs(targetScroll - currentScroll) < 0.5) {
+            currentScroll = targetScroll;
+            isTicking = false;
+          }
+          window.scrollTo(0, currentScroll);
+          if (isTicking) {
+            requestAnimationFrame(updateScroll);
+          }
+        };
+
+        const startScrollAnimation = () => {
+          if (!isTicking) {
+            isTicking = true;
+            requestAnimationFrame(updateScroll);
+          }
+        };
+
+        window.addEventListener('wheel', (event) => {
+          if (event.ctrlKey) {
+            return;
+          }
+          event.preventDefault();
+          targetScroll = clampScroll(targetScroll + event.deltaY * 0.6);
+          startScrollAnimation();
+        }, { passive: false });
+
+        window.addEventListener('keydown', (event) => {
+          const scrollKeys = ['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End', ' '];
+          if (!scrollKeys.includes(event.key)) {
+            return;
+          }
+          event.preventDefault();
+
+          const step = window.innerHeight * 0.5;
+          if (event.key === 'ArrowDown' || event.key === ' ') {
+            targetScroll = clampScroll(targetScroll + step);
+          } else if (event.key === 'ArrowUp') {
+            targetScroll = clampScroll(targetScroll - step);
+          } else if (event.key === 'PageDown') {
+            targetScroll = clampScroll(targetScroll + window.innerHeight);
+          } else if (event.key === 'PageUp') {
+            targetScroll = clampScroll(targetScroll - window.innerHeight);
+          } else if (event.key === 'Home') {
+            targetScroll = 0;
+          } else if (event.key === 'End') {
+            targetScroll = clampScroll(document.documentElement.scrollHeight);
+          }
+
+          startScrollAnimation();
+        });
+
+        window.addEventListener('resize', () => {
+          currentScroll = window.scrollY || window.pageYOffset;
+          targetScroll = currentScroll;
+        });
+      }
+
       // Mobile Menu Toggle
       const mobileMenuButton = document.getElementById('mobile-menu-button');
       const mobileMenuClose = document.getElementById('mobile-menu-close');
